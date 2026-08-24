@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data-Frames | Enterprise-Level Security, SMB-Friendly Pricing</title>
+<meta name="description" content="Data-Frames brings continuous threat detection, real offensive testing, and automated response to small businesses — enterprise-level security at SMB-friendly pricing.">
+<meta property="og:title" content="Data-Frames | Enterprise-Level Security, SMB-Friendly Pricing">
+<meta property="og:description" content="Continuous threat detection, real offensive testing, and automated response for small businesses that need genuine protection without an enterprise budget.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://data-frames.com/">
+<meta property="og:image" content="https://data-frames.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Data-Frames — enterprise-level security, SMB-friendly pricing">
+<meta property="og:site_name" content="Data-Frames">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data-Frames | Enterprise-Level Security, SMB-Friendly Pricing">
+<meta name="twitter:description" content="Continuous threat detection, real offensive testing, and automated response for small businesses that need genuine protection without an enterprise budget.">
+<meta name="twitter:image" content="https://data-frames.com/assets/og-image.png">
+<link rel="canonical" href="https://data-frames.com/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2316211c'/%3E%3Cg fill='none' stroke='%230f6b5c' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 22 L6 50 L15 78'/%3E%3Ccircle cx='50' cy='50' r='31'/%3E%3Cpath d='M85 22 L94 50 L85 78'/%3E%3C/g%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f7f5f1;
+    --bg-panel: #ffffff;
+    --bg-panel-alt: #f0ede6;
+    --border: #e2ddd2;
+    --ink: #16211c;
+    --text: #2b352f;
+    --text-dim: #5f6b63;
+    --text-faint: #647166;
+    --accent: #0f6b5c;
+    --accent-dim: #0a4c41;
+    --accent-tint: #e6f0ed;
+    --amber: #8f600c;
+    --red: #b03a2e;
+    --green: #2e764d;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+
+  .serif { font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif; }
+  .mono { font-family: "Consolas", "SF Mono", Menlo, monospace; }
+
+  a { color: var(--accent); text-decoration: none; }
+
+  .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(247, 245, 241, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: Georgia, serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .logo span { color: var(--accent); margin: 0 -7px; }
+  .nav-links { display: flex; gap: 32px; font-size: 0.92rem; }
+  .nav-links a { color: var(--text-dim); font-weight: 500; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--ink);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.86rem;
+  }
+  .nav-cta:hover { background: var(--accent-dim); }
+
+  /* Hero */
+  .hero {
+    padding: 96px 0 104px;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 64px;
+    align-items: center;
+    border-top: none;
+  }
+  .eyebrow {
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, serif;
+    font-size: 3rem;
+    line-height: 1.1;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 22px;
+    letter-spacing: -0.015em;
+  }
+  h1 .accent { color: var(--accent); font-style: italic; }
+  .hero p.lead {
+    color: var(--text-dim);
+    font-size: 1.14rem;
+    max-width: 48ch;
+    margin-bottom: 34px;
+  }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 26px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent-dim); }
+  .btn-secondary {
+    border: 1px solid var(--ink);
+    color: var(--ink);
+    padding: 14px 26px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+  }
+  .btn-secondary:hover { background: var(--ink); color: #fff; }
+
+  /* Signal panel (light) */
+  .signal-panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px -32px rgba(22, 33, 28, 0.25);
+  }
+  .signal-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 18px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg-panel-alt);
+  }
+  .signal-panel-title {
+    font-size: 0.78rem;
+    color: var(--text-dim);
+    font-weight: 600;
+    display: flex; align-items: center; gap: 8px;
+    letter-spacing: 0.04em;
+  }
+  .live-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 6px rgba(46,118,77,0.5);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .signal-dots { display: flex; gap: 5px; }
+  .signal-dots span { width: 8px; height: 8px; border-radius: 50%; background: var(--border); }
+
+  .signal-log { height: 320px; overflow: hidden; padding: 8px 0; }
+  .signal-log-track { display: flex; flex-direction: column; animation: scrollLog 22s linear infinite; }
+  @keyframes scrollLog { 0% { transform: translateY(0); } 100% { transform: translateY(-50%); } }
+  .log-line {
+    display: flex; gap: 10px; padding: 7px 18px;
+    font-size: 0.75rem; white-space: nowrap;
+    border-bottom: 1px solid var(--bg-panel-alt);
+  }
+  .log-time { color: var(--text-faint); flex-shrink: 0; }
+  .log-tag { flex-shrink: 0; font-weight: 700; padding: 1px 6px; border-radius: 3px; font-size: 0.66rem; }
+  .log-tag.info { color: var(--accent-dim); background: var(--accent-tint); }
+  .log-tag.warn { color: var(--amber); background: #f7ecd8; }
+  .log-tag.crit { color: var(--red); background: #f6e2df; }
+  .log-tag.ok   { color: var(--green); background: #e3f0e7; }
+  .log-msg { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; }
+
+  /* Sections */
+  section { padding: 100px 0; border-top: 1px solid var(--border); }
+  .section-head { max-width: 62ch; margin-bottom: 52px; }
+  .section-eyebrow {
+    color: var(--accent); font-size: 0.8rem; letter-spacing: 0.12em;
+    text-transform: uppercase; font-weight: 700; margin-bottom: 14px;
+  }
+  h2 {
+    font-family: Georgia, serif;
+    font-size: 2.15rem; font-weight: 700; color: var(--ink);
+    margin-bottom: 14px; letter-spacing: -0.01em;
+  }
+  .section-head p { color: var(--text-dim); font-size: 1.05rem; }
+
+  /* Services grid */
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .card { background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px; padding: 30px; display: flex; flex-direction: column; }
+  .card-icon { width: 46px; height: 46px; color: var(--accent-dim); margin-bottom: 18px; }
+  .brand-mark { width: 34px; height: 34px; color: var(--accent); flex-shrink: 0; }
+  .card-icon svg { width: 100%; height: 100%; }
+  .card h3 { font-size: 1.08rem; font-weight: 700; color: var(--ink); margin-bottom: 10px; }
+  .card p { color: var(--text-dim); font-size: 0.93rem; }
+  .card-tool {
+    display: flex; align-items: center; gap: 7px;
+    margin-top: auto; padding-top: 16px; font-size: 0.8rem; font-weight: 600; color: var(--text-dim);
+  }
+  .card-tool .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .card-tool strong { color: var(--ink); font-weight: 700; }
+
+  /* Tool stack */
+  .tool-list { display: flex; flex-direction: column; margin-bottom: 40px; }
+  .tool-row {
+    display: flex; align-items: center; gap: 28px;
+    padding: 24px 0; border-bottom: 1px solid var(--border);
+  }
+  .tool-row:first-child { border-top: 1px solid var(--border); }
+  .tool-logo-chip {
+    background: #000000; border-radius: 6px; padding: 10px 18px;
+    display: flex; align-items: center; justify-content: center;
+    height: 130px; width: 180px; flex-shrink: 0;
+  }
+  .tool-logo { height: 56px; max-width: 165px; object-fit: contain; display: block; }
+  .tool-logo-badge { height: 112px; width: auto; max-width: 165px; object-fit: contain; display: block; }
+  .tool-text h3 { font-size: 1.05rem; font-weight: 700; color: var(--ink); margin-bottom: 6px; }
+  .tool-text p { color: var(--text-dim); font-size: 0.93rem; max-width: 62ch; }
+  .framework-intro { margin: 48px 0 20px; font-weight: 600; color: var(--ink); font-size: 0.95rem; }
+  .framework-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .framework-badge {
+    border: 1px dashed var(--border); border-radius: 8px; padding: 20px 22px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .fw-name { font-family: Georgia, serif; font-weight: 700; color: var(--ink); font-size: 1.05rem; text-decoration: underline; text-underline-offset: 3px; }
+  .fw-desc { color: var(--text-dim); font-size: 0.86rem; }
+  @media (max-width: 700px) {
+    .tool-row { flex-wrap: wrap; }
+    .framework-row { grid-template-columns: 1fr; }
+  }
+
+  /* Process */
+  .process { display: flex; flex-direction: column; }
+  .process-step {
+    display: flex; align-items: center; gap: 28px; max-width: 800px;
+    padding: 26px 0; border-bottom: 1px solid var(--border);
+  }
+  .process-step:last-child { border-bottom: none; }
+  .process-text { flex: 1 1 auto; min-width: 0; }
+  .process-img {
+    width: 180px; height: 130px; border-radius: 6px; overflow: hidden; order: -1;
+    border: 1px solid var(--border); flex-shrink: 0;
+  }
+  .process-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .process-step h3 { font-size: 1.08rem; font-weight: 700; color: var(--ink); margin-bottom: 8px; }
+  .process-step p { color: var(--text-dim); font-size: 0.94rem; }
+  @media (max-width: 700px) {
+    .process-step { flex-wrap: wrap; }
+    .process-img { display: none; }
+  }
+
+  /* About */
+  .about-wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: start; }
+  .about-copy p { color: var(--text); font-size: 1.03rem; margin-bottom: 18px; max-width: 56ch; }
+  .about-copy p:last-child { margin-bottom: 0; }
+  .credentials { display: flex; flex-direction: column; gap: 16px; }
+  .stat-card {
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 22px 26px; display: flex; align-items: baseline; gap: 14px;
+  }
+  .stat-num { font-family: Georgia, serif; font-size: 1.7rem; font-weight: 700; color: var(--accent); }
+  .stat-label { color: var(--text-dim); font-size: 0.88rem; }
+
+  /* FAQ */
+  .faq-list { max-width: 760px; }
+  details {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+  details:first-child { border-top: 1px solid var(--border); }
+  summary {
+    font-weight: 600; color: var(--ink); font-size: 1.02rem;
+    cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after {
+    content: "+"; color: var(--accent); font-size: 1.3rem; font-weight: 400; margin-left: 20px; flex-shrink: 0;
+  }
+  details[open] summary::after { content: "\2212"; }
+  details p { color: var(--text-dim); font-size: 0.95rem; margin-top: 14px; max-width: 64ch; }
+
+  /* Results placeholder */
+  .results-card {
+    background: var(--bg-panel); border: 1px dashed var(--border); border-radius: 8px;
+    padding: 44px; text-align: center; max-width: 720px; margin: 0 auto;
+  }
+  .results-card h3 { font-family: Georgia, serif; font-size: 1.3rem; color: var(--ink); margin-bottom: 12px; }
+  .results-card p { color: var(--text-dim); font-size: 0.97rem; max-width: 52ch; margin: 0 auto 20px; }
+
+  /* Pricing */
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .price-card {
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 8px;
+    padding: 32px 28px; display: flex; flex-direction: column;
+  }
+  .price-card.featured { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .price-tier { font-size: 0.84rem; color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.07em; font-weight: 600; margin-bottom: 12px; }
+  .price-amount { font-family: Georgia, serif; font-size: 1.7rem; font-weight: 700; color: var(--ink); margin-bottom: 4px; }
+  .price-amount span { font-size: 0.85rem; color: var(--text-dim); font-weight: 400; font-family: -apple-system, sans-serif; }
+  .price-cad { font-size: 0.78rem; color: var(--text-faint); margin-bottom: 22px; }
+  .price-features { list-style: none; margin-bottom: 26px; flex-grow: 1; }
+  .price-features li { font-size: 0.89rem; color: var(--text-dim); padding: 9px 0; border-top: 1px solid var(--border); }
+  .price-features li:first-child { border-top: none; }
+  .addon-note {
+    margin-top: 24px; padding: 18px 22px; background: var(--accent-tint);
+    border-radius: 8px; font-size: 0.89rem; color: var(--accent-dim);
+  }
+  .addon-note strong { color: var(--ink); }
+
+  /* Contact */
+  .contact-wrap {
+    background: var(--bg-panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 44px; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 44px;
+  }
+  .contact-info h3 { font-family: Georgia, serif; font-size: 1.35rem; color: var(--ink); margin-bottom: 12px; }
+  .contact-info p { color: var(--text-dim); font-size: 0.95rem; margin-bottom: 22px; }
+  .contact-info a.email { color: var(--accent); font-weight: 600; font-size: 0.97rem; }
+  form { display: flex; flex-direction: column; gap: 14px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  input, textarea {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 5px;
+    padding: 12px 14px; color: var(--text); font-size: 0.9rem; font-family: inherit; width: 100%;
+  }
+  input:focus, textarea:focus { outline: none; border-color: var(--accent); }
+  textarea { resize: vertical; min-height: 90px; }
+  .form-submit {
+    background: var(--accent); color: #fff; border: none; border-radius: 5px;
+    padding: 14px 26px; font-weight: 600; font-size: 0.93rem; cursor: pointer; align-self: flex-start;
+  }
+  .form-submit:hover { background: var(--accent-dim); }
+  .form-status { font-size: 0.85rem; color: var(--accent-dim); font-weight: 600; display: none; }
+  .field { display: flex; flex-direction: column; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  footer { border-top: 1px solid var(--border); padding: 36px 0; text-align: center; color: var(--text-faint); font-size: 0.85rem; }
+
+  @media (max-width: 860px) {
+    .hero, .about-wrap { grid-template-columns: 1fr; padding-top: 56px; }
+    .grid, .pricing-grid { grid-template-columns: 1fr; }
+    .contact-wrap { grid-template-columns: 1fr; padding: 28px; }
+    .form-row { grid-template-columns: 1fr; }
+    h1 { font-size: 2.2rem; }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo" style="display:flex; align-items:center; gap:8px;">
+      <div style="width: 34px; height: 34px; box-sizing: border-box; border-radius: 7px; background: #16211c; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.3 7 L1.5 16 L9.3 25"/>
+          <circle cx="16" cy="16" r="6"/>
+          <path d="M22.7 7 L30.5 16 L22.7 25"/>
+        </svg>
+      </div>
+      Data<span>-</span>Frames.com
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#who">Who We Serve</a>
+      <a href="#stack">Our Toolset</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </nav>
+</header>
+
+<div class="container">
+  <section class="hero" style="border-top: none;">
+    <div>
+      <div class="eyebrow">SMB Cybersecurity Consulting</div>
+      <h1>Enterprise-level security. <span class="accent">SMB-friendly pricing.</span></h1>
+      <p class="lead">Data-Frames brings continuous threat detection, real offensive testing, and automated response to small businesses that need genuine protection without an enterprise budget or an in-house security team.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Request a Consultation</a>
+        <a href="#services" class="btn-secondary">See What We Monitor</a>
+      </div>
+    </div>
+
+    <div class="signal-panel">
+      <div class="signal-panel-header">
+        <div class="signal-panel-title"><span class="live-dot"></span> LIVE SIGNAL FEED</div>
+        <div class="signal-dots"><span></span><span></span><span></span></div>
+      </div>
+      <div class="signal-log"><div class="signal-log-track mono" id="logTrack"></div></div>
+    </div>
+  </section>
+</div>
+
+<section id="services">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Services</div>
+      <h2>Full-stack defense, built for SMB budgets</h2>
+      <p>Each layer runs independently and reports up — detection, response, and offense are never confused with one another, and you always know which system caught what.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon" style="color:#0d9488;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M9 17h3.5l1.8-5 2.6 9 1.8-4H23" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Threat Detection &amp; SIEM</h3>
+        <p>Continuous log correlation and alerting across your environment. File integrity monitoring, vulnerability detection, and real-time alerting mean issues are caught in minutes, not discovered months later during an audit — built around the CIS Controls' continuous monitoring safeguard.</p>
+        <div class="card-tool"><span class="dot" style="background:#0d9488;"></span>Powered by <strong>Wazuh</strong></div>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#e2521d;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <circle cx="16" cy="16" r="4" stroke-width="1.6"/><path d="M16 8v3M16 21v3M8 16h3M21 16h3" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Penetration Testing</h3>
+        <p>Real offensive assessments against your infrastructure using industry-standard tooling — the same techniques an actual attacker would use, mapped against the MITRE ATT&amp;CK matrix, so you find your gaps before someone else does.</p>
+        <div class="card-tool"><span class="dot" style="background:#e2521d;"></span>Powered by <strong>Metasploit</strong></div>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#d97706;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M11.5 14a5 5 0 0 1 8-3.2l1.5 1.2" stroke-width="1.6"/><path d="M21 9v3.5h-3.5" stroke-width="1.6"/>
+          <path d="M20.5 18a5 5 0 0 1-8 3.2l-1.5-1.2" stroke-width="1.6"/><path d="M11 23v-3.5h3.5" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Security Automation &amp; Response</h3>
+        <p>Automated playbooks act on alerts the moment they fire — enrichment, containment, and notification triggered instantly, without waiting on a human to be available at 2am, covering the NIST CSF Respond function.</p>
+        <div class="card-tool"><span class="dot" style="background:#d97706;"></span>Powered by <strong>Shuffle</strong></div>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#7c3aed;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M9 16s3-4.5 7-4.5 7 4.5 7 4.5-3 4.5-7 4.5-7-4.5-7-4.5z" stroke-width="1.6"/><circle cx="16" cy="16" r="2" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Deception &amp; Honeypots</h3>
+        <p>An isolated decoy environment attracts and studies real attacker behavior, giving early warning of active threats before your production systems are ever touched — observed activity gets catalogued against MITRE ATT&amp;CK.</p>
+        <div class="card-tool"><span class="dot" style="background:#7c3aed;"></span>Powered by <strong>T-Pot</strong></div>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#2563eb;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M16 9l5 1.8v4.4c0 3.6-2.1 6-5 7-2.9-1-5-3.4-5-7v-4.4L16 9z" stroke-width="1.6"/><path d="M13.3 16l1.8 1.8 3.6-3.6" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Compliance &amp; Governance</h3>
+        <p>Policy, risk, and continuity documentation structured around the NIST Cybersecurity Framework — built for organizations that need to demonstrate their security posture, not just maintain it privately.</p>
+        <div class="card-tool"><span class="dot" style="background:#0d9488;"></span>Powered by <strong>Wazuh</strong> compliance modules</div>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#be185d;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M16 11l5.5 9.5h-11L16 11z" stroke-width="1.6"/><path d="M16 15.2v2.3" stroke-width="1.6"/><circle cx="16" cy="19.6" r="0.7" fill="currentColor" stroke="none"/>
+        </svg></div>
+        <h3>Incident Response Planning</h3>
+        <p>A tested plan for the day something goes wrong — roles, escalation paths, and recovery steps defined and rehearsed before you need them, not improvised while it's happening, aligned to the NIST CSF Respond and Recover functions.</p>
+        <div class="card-tool"><span class="dot" style="background:#d97706;"></span>Executed via <strong>Shuffle</strong> playbooks</div>
+      </div>
+    </div>
+    <div class="framework-intro">Every service above is grounded in a recognized framework, not improvised:</div>
+    <div class="framework-row">
+      <div class="framework-badge"><span class="fw-name">NIST CSF</span><span class="fw-desc">The NIST Cybersecurity Framework organizes everything we do into core functions — Govern, Identify, Protect, Detect, Respond, Recover — so risk decisions and priorities follow a recognized structure, not guesswork.</span></div>
+      <div class="framework-badge"><span class="fw-name">CIS Controls</span><span class="fw-desc">A prioritized, actionable set of safeguards — asset inventory, secure configuration, access control, continuous monitoring — that turns strategy into specific technical hardening steps we actually implement.</span></div>
+      <div class="framework-badge"><span class="fw-name">MITRE ATT&amp;CK</span><span class="fw-desc">A knowledge base of real-world attacker tactics and techniques, used as a common language to map both our penetration testing and our detection coverage to what attackers actually do.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Who We Serve</div>
+      <h2>Built for the industries that need it most</h2>
+      <p>Every SMB has exposure, but some carry risks specific to what they do. Here's how that plays out in three of the industries we work with most.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon" style="color:#dc2626;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M16 9v14M9 16h14" stroke-width="1.8"/>
+        </svg></div>
+        <h3>Small Healthcare Practices</h3>
+        <p>Patient records are a prime target, and HIPAA doesn't care about your headcount. We map technical safeguards to HIPAA's Security Rule so PHI stays protected and an audit stays survivable instead of existential.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#4f46e5;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <path d="M16 8v16M10 12l-3 4 3 4M22 12l3 4-3 4" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Legal &amp; Accounting Firms</h3>
+        <p>Privileged client data and wire transfers make you a prime target for business email compromise. We harden the exact channels attackers use to intercept confidential filings and payment instructions.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="color:#475569;"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 10V6a2 2 0 0 1 2-2h4" stroke-width="2"/><path d="M28 10V6a2 2 0 0 0-2-2h-4" stroke-width="2"/>
+          <path d="M4 22v4a2 2 0 0 0 2 2h4" stroke-width="2"/><path d="M28 22v4a2 2 0 0 1-2 2h-4" stroke-width="2"/>
+          <circle cx="16" cy="16" r="4.5" stroke-width="1.6"/><path d="M16 9.5v2M16 20.5v2M9.5 16h2M20.5 16h2M11.5 11.5l1.4 1.4M19.1 19.1l1.4 1.4M11.5 20.5l1.4-1.4M19.1 12.9l1.4-1.4" stroke-width="1.6"/>
+        </svg></div>
+        <h3>Manufacturers</h3>
+        <p>Ransomware doesn't just lock files — it stops production lines. We protect the operational systems and supply-chain connections that keep output moving, not just the front-office network.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Our Toolset</div>
+      <h2>Built on recognized tools</h2>
+      <p>No proprietary black boxes — the same open-source tools used across the security industry, so nothing you're protected by is a mystery.</p>
+    </div>
+    <div class="tool-list">
+      <div class="tool-row">
+        <div class="tool-logo-chip"><img src="assets/logos/wazuh.svg" alt="Wazuh logo" class="tool-logo"></div>
+        <div class="tool-text"><h3>Wazuh — Detection &amp; SIEM</h3><p>Open-source SIEM and XDR platform. Correlates logs across your environment in real time to catch intrusions, policy violations, and vulnerabilities as they happen, not weeks later.</p></div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-logo-chip"><img src="assets/logos/metasploit.svg" alt="Metasploit logo" class="tool-logo"></div>
+        <div class="tool-text"><h3>Metasploit — Offensive Testing</h3><p>The industry-standard penetration testing framework. Used to safely simulate real attacker techniques against your own infrastructure, under controlled conditions, to find gaps before someone else does.</p></div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-logo-chip"><img src="assets/logos/shuffle_topleft.svg" alt="Shuffle logo" class="tool-logo"></div>
+        <div class="tool-text"><h3>Shuffle — Security Automation (SOAR)</h3><p>Open-source security orchestration and automated response. Turns a detection alert into an automated containment or notification action immediately, instead of waiting on a human to be available.</p></div>
+      </div>
+      <div class="tool-row">
+        <div class="tool-logo-chip"><img src="assets/logos/tpot.png" alt="T-Pot logo" class="tool-logo-badge"></div>
+        <div class="tool-text"><h3>T-Pot — Deception &amp; Honeypots</h3><p>A multi-honeypot platform that deploys decoy systems to attract and study real attacker behavior, giving early warning of active threats before production systems are ever touched.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Engagement</div>
+      <h2>How an engagement runs</h2>
+      <p>Five steps from first conversation to ongoing protection — no long procurement cycle, no jargon you need a translator for.</p>
+    </div>
+    <div class="process">
+      <div class="process-step">
+        <div class="process-text"><h3>Discovery &amp; Risk Assessment</h3><p>We map your environment, assets, and current exposure in a conversation, not a questionnaire — what you actually have, what matters most to the business, and where the real risk sits today.</p></div>
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1586769852836-bc069f19e1b6?auto=format&fit=crop&w=400&h=300&q=70" alt="Magnifying glass, representing risk discovery" loading="lazy"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-text"><h3>Scoping &amp; Architecture</h3><p>A tailored plan for detection, response, and testing coverage, sized to your environment and budget. You get exactly the tooling you need — nothing sold to you because it's on a package tier.</p></div>
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1571666521805-f5e8423aba9d?auto=format&fit=crop&w=400&h=300&q=70" alt="Flowchart diagram on a wall, representing architecture planning" loading="lazy"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-text"><h3>Deployment</h3><p>Detection and automation stood up in an environment built specifically for your business — nothing shared with, or visible to, any other client.</p></div>
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1744868562210-fffb7fa882d9?auto=format&fit=crop&w=400&h=300&q=70" alt="Neatly connected network cables, representing deployment" loading="lazy"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-text"><h3>Validation</h3><p>Live testing against your own defenses confirms detection and response actually work under real conditions, not just that the software is installed and running.</p></div>
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=400&h=300&q=70" alt="Source code on a monitor, representing validation testing" loading="lazy"></div>
+      </div>
+      <div class="process-step">
+        <div class="process-text"><h3>Ongoing Monitoring &amp; Reporting</h3><p>Regular, plain-language reporting on what was seen, what was blocked, and where your posture is trending — security as an ongoing relationship with someone who knows your business, not a one-time project.</p></div>
+        <div class="process-img"><img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=400&h=300&q=70" alt="Business analytics dashboard, representing ongoing reporting" loading="lazy"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">About</div>
+      <h2>Built on decades of hands-on experience</h2>
+    </div>
+    <div class="about-wrap">
+      <div class="about-copy">
+        <p>Data-Frames is run directly by its founder — no account managers relaying information, no outsourced analysts you've never spoken to. When you call, you're talking to the person who actually configured your detection rules and ran your last assessment.</p>
+        <p>That comes from over three decades of hands-on IT and security work — not a career built around a single certification, but one built around actually keeping systems running and businesses protected, across enough different environments to know what really matters when something goes wrong versus what's just noise.</p>
+        <p>Data-Frames exists because SMBs are told they need "enterprise-grade" security and then handed enterprise pricing to match — or worse, nothing at all because it wasn't worth a big firm's time. That gap is the whole reason this business exists.</p>
+      </div>
+      <div class="credentials">
+        <div class="stat-card"><div class="stat-num">30+</div><div class="stat-label">Years in IT &amp; security, hands-on</div></div>
+        <div class="stat-card"><div class="stat-num">1:1</div><div class="stat-label">Direct access to who does the work — always</div></div>
+        <div class="stat-card"><div class="stat-num">CISSP</div><div class="stat-label">Certification in progress, targeting completion soon</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">FAQ</div>
+      <h2>Common questions</h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>We're too small to be a target, right?</summary>
+        <p>This is the most common misconception in SMB security, and it's backwards — most modern attacks are automated and don't care about your size. Small businesses are frequently targeted specifically because they're assumed to have weaker defenses than large enterprises, not despite being small.</p>
+      </details>
+      <details>
+        <summary>What does a security assessment actually involve?</summary>
+        <p>A structured look at your current environment — network, endpoints, access controls, and any existing tooling — followed by real (not simulated) testing of your defenses where appropriate. You get a plain-language report of what was found and what to prioritize, not a 60-page document full of jargon.</p>
+      </details>
+      <details>
+        <summary>How is pricing structured?</summary>
+        <p>Flat monthly tiers in CAD, scoped to your environment during the discovery call — see the Pricing section below. No hourly billing surprises, no long-term contract required to get started.</p>
+      </details>
+      <details>
+        <summary>Do you replace our existing IT provider?</summary>
+        <p>Not necessarily — Data-Frames focuses specifically on security (detection, testing, response), and works alongside whoever handles your day-to-day IT rather than requiring you to switch providers.</p>
+      </details>
+      <details>
+        <summary>What's the honeypot / network-packets.com about?</summary>
+        <p>It's a public demonstration environment currently in development — a deliberately exposed system designed to attract real attacker activity, so you'll be able to see actual detection and response in action rather than take a sales pitch's word for it. Ask us for a status update if you're curious where it stands.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="results">
+  <div class="container">
+    <div class="results-card">
+      <h3 class="serif">Building our client track record</h3>
+      <p>Data-Frames is a new practice — we'd rather tell you that plainly than manufacture case studies that don't exist yet. We're also building a public demo environment so you'll eventually be able to see the underlying detection and response capability for yourself, not just take our word for it.</p>
+      <a href="#contact" class="btn-secondary">Ask About Our Progress</a>
+    </div>
+  </div>
+</section>
+
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Pricing</div>
+      <h2>Straightforward monthly plans</h2>
+      <p>All prices in CAD. Every engagement starts with a scoping call to confirm the right tier for your environment.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-tier">Essentials</div>
+        <div class="price-amount">$500 <span>&ndash; $1,500 / mo</span></div>
+        <div class="price-cad">CAD, billed monthly</div>
+        <ul class="price-features">
+          <li>Core SIEM monitoring &amp; alerting</li>
+          <li>Monthly security report</li>
+          <li>Email-based incident notification</li>
+        </ul>
+        <a href="#contact" class="btn-secondary" style="text-align:center;">Talk to us</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-tier">Standard</div>
+        <div class="price-amount">$1,500 <span>&ndash; $3,500 / mo</span></div>
+        <div class="price-cad">CAD, billed monthly</div>
+        <ul class="price-features">
+          <li>Everything in Essentials</li>
+          <li>Automated response playbooks</li>
+          <li>Annual penetration test</li>
+          <li>Priority incident response</li>
+        </ul>
+        <a href="#contact" class="btn-primary" style="text-align:center;">Talk to us</a>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">Premium</div>
+        <div class="price-amount">$3,500 <span>+ / mo</span></div>
+        <div class="price-cad">CAD, billed monthly</div>
+        <ul class="price-features">
+          <li>Everything in Standard</li>
+          <li>Quarterly penetration testing</li>
+          <li>Compliance mapping &amp; reporting</li>
+          <li>Dedicated response SLA</li>
+        </ul>
+        <a href="#contact" class="btn-secondary" style="text-align:center;">Talk to us</a>
+      </div>
+    </div>
+    <div class="addon-note"><strong>Honeypot &amp; Deception add-on</strong> — $300&ndash;$800/mo CAD. Adds a monitored deception layer for early warning on any tier.</div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Let's talk about your environment</h3>
+        <p>Tell us a bit about your business and current setup. We'll follow up to schedule a scoping call — no obligation.</p>
+        <a class="email" href="mailto:aaron@data-frames.com">aaron@data-frames.com</a>
+      </div>
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label class="visually-hidden" for="f-name">Name</label>
+            <input id="f-name" name="name" type="text" placeholder="Name" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label class="visually-hidden" for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" placeholder="Company" autocomplete="organization" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label class="visually-hidden" for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" placeholder="Email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label class="visually-hidden" for="f-phone">Phone (optional)</label>
+            <input id="f-phone" name="phone" type="tel" placeholder="Phone (optional)" autocomplete="tel">
+          </div>
+        </div>
+        <div class="field">
+          <label class="visually-hidden" for="f-message">What does your current environment look like?</label>
+          <textarea id="f-message" name="message" placeholder="What does your current environment look like?" required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Send</button>
+        <div class="form-status" id="formStatus" role="status" aria-live="polite">Thanks — we'll be in touch shortly.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container" style="display: flex; flex-direction: column; align-items: center; gap: 16px;">
+    <div style="width: 56px; height: 56px; box-sizing: border-box; border: 2px solid #ffffff; outline: 1.5px solid #16211c; outline-offset: 3px; border-radius: 10px; background: #16211c; display: flex; align-items: center; justify-content: center;">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="#ffffff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9.3 7 L1.5 16 L9.3 25"/>
+        <circle cx="16" cy="16" r="6"/>
+        <path d="M22.7 7 L30.5 16 L22.7 25"/>
+      </svg>
+    </div>
+    <div>Data-Frames &middot; data-frames.com &middot; &copy; 2026</div>
+  </div>
+</footer>
+
+<script>
+  const events = [
+    { time: '14:02:11', tag: 'info', label: 'WAZUH', msg: 'Agent 0042 checked in — rules updated' },
+    { time: '14:02:19', tag: 'ok',   label: 'AUTH',  msg: 'MFA challenge succeeded — user jsmith' },
+    { time: '14:02:34', tag: 'warn', label: 'FIM',   msg: 'File integrity change detected — /etc/passwd' },
+    { time: '14:02:41', tag: 'info', label: 'NET',   msg: 'Outbound connection logged — TLS 1.3, port 443' },
+    { time: '14:02:55', tag: 'crit', label: 'IDS',   msg: 'Signature match: possible SQLi attempt blocked' },
+    { time: '14:03:02', tag: 'ok',   label: 'SHUFFLE', msg: 'Playbook "isolate-host" completed successfully' },
+    { time: '14:03:14', tag: 'info', label: 'VULN',  msg: 'Scheduled vulnerability scan started — 214 hosts' },
+    { time: '14:03:27', tag: 'warn', label: 'LOGIN', msg: '5 failed login attempts — source 203.0.113.44' },
+    { time: '14:03:39', tag: 'crit', label: 'HONEYPOT', msg: 'Inbound SSH brute-force logged on decoy host' },
+    { time: '14:03:52', tag: 'ok',   label: 'PATCH', msg: 'Critical patch deployed — CVE-2026-11029' },
+    { time: '14:04:08', tag: 'info', label: 'REPORT', msg: 'Weekly security summary generated for client' },
+    { time: '14:04:20', tag: 'warn', label: 'FW',    msg: 'Anomalous port scan detected — rate-limited' },
+  ];
+  function tagLabel(tag) { return { info: 'INFO', warn: 'WARN', crit: 'CRIT', ok: 'OK' }[tag]; }
+  function buildLog() {
+    const track = document.getElementById('logTrack');
+    const doubled = events.concat(events);
+    track.innerHTML = doubled.map(e => `
+      <div class="log-line">
+        <span class="log-time">${e.time}</span>
+        <span class="log-tag ${e.tag}">${tagLabel(e.tag)}</span>
+        <span class="log-msg">[${e.label}] ${e.msg}</span>
+      </div>
+    `).join('');
+  }
+  buildLog();
+
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('formStatus').style.display = 'block';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>
