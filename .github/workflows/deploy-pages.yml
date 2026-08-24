@@ -31,3 +31,5 @@ jobs:
           path: ./website
       - id: deployment
         uses: actions/deploy-pages@v4
+
+# redeploy trigger
