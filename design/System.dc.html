@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; letter-spacing: -0.015em; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .card { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; padding: 26px; }
+    p { margin: 0; }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 46px; border-radius: 5px; }
+    .hex { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px; color: #5f6b63; }
+  </style>
+</helmet>
+
+<div style="padding: 44px 48px; display: flex; flex-direction: column; gap: 26px;">
+
+  <div>
+    <div class="lbl" style="color: #0f6b5c;">Reference sheet</div>
+    <h1 class="disp" style="font-size: 40px; color: #16211c; margin: 8px 0 0; line-height: 1.1;">What changes, and why</h1>
+  </div>
+
+  <!-- TYPE: before / after -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+
+    <div class="card" style="background: #f0ede6;">
+      <div class="lbl">Now — browser defaults</div>
+      <div style="font-family: Georgia, serif; font-size: 34px; color: #16211c; line-height: 1.1; margin-top: 16px;">
+        Enterprise-level security.
+      </div>
+      <p style="font-family: -apple-system, 'Segoe UI', Roboto, Arial, sans-serif; color: #5f6b63; font-size: 15px; margin-top: 12px;">
+        Georgia for headings, whatever sans the browser happens to have for everything else. Reads as an unstyled document.
+      </p>
+      <div class="mono" style="font-size: 11px; color: #8a8478; margin-top: 16px;">Georgia · system-ui</div>
+    </div>
+
+    <div class="card">
+      <div class="lbl" style="color: #0f6b5c;">Proposed</div>
+      <div class="disp" style="font-size: 38px; color: #16211c; line-height: 1.05; margin-top: 14px;">
+        Enterprise-level <span style="font-style: italic; color: #0f6b5c;">security.</span>
+      </div>
+      <p style="color: #5f6b63; font-size: 15px; margin-top: 12px;">
+        A high-contrast editorial serif for display, a technical sans for text, and a mono that ties every number and label back to the signal feed.
+      </p>
+      <div class="mono" style="font-size: 11px; color: #0f6b5c; margin-top: 16px;">Instrument Serif · IBM Plex Sans · IBM Plex Mono</div>
+    </div>
+
+  </div>
+
+  <!-- TYPE RAMP -->
+  <div class="card">
+    <div class="lbl">Type scale</div>
+    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 18px;">
+      <div style="display: flex; align-items: baseline; gap: 22px;">
+        <span class="mono" style="font-size: 10.5px; color: #8a8478; width: 130px; flex-shrink: 0;">display / 76</span>
+        <span class="disp" style="font-size: 46px; color: #16211c; line-height: 1;">Hero headline</span>
+      </div>
+      <div style="height: 1px; background: #f0ede6;"></div>
+      <div style="display: flex; align-items: baseline; gap: 22px;">
+        <span class="mono" style="font-size: 10.5px; color: #8a8478; width: 130px; flex-shrink: 0;">section / 46</span>
+        <span class="disp" style="font-size: 30px; color: #16211c; line-height: 1;">Section heading</span>
+      </div>
+      <div style="height: 1px; background: #f0ede6;"></div>
+      <div style="display: flex; align-items: baseline; gap: 22px;">
+        <span class="mono" style="font-size: 10.5px; color: #8a8478; width: 130px; flex-shrink: 0;">body / 16</span>
+        <span style="font-size: 16px; color: #2b352f;">Body copy, set at a comfortable reading measure.</span>
+      </div>
+      <div style="height: 1px; background: #f0ede6;"></div>
+      <div style="display: flex; align-items: baseline; gap: 22px;">
+        <span class="mono" style="font-size: 10.5px; color: #8a8478; width: 130px; flex-shrink: 0;">mono / 12</span>
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.14em; color: #0f6b5c; text-transform: uppercase;">01 / Services</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- PALETTE -->
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px;">
+
+    <div class="card">
+      <div class="lbl">Light surfaces — unchanged</div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px;">
+        <div class="sw"><div class="chip" style="background: #f7f5f1; border: 1px solid #e2ddd2;"></div><span class="hex">#f7f5f1</span></div>
+        <div class="sw"><div class="chip" style="background: #f0ede6; border: 1px solid #e2ddd2;"></div><span class="hex">#f0ede6</span></div>
+        <div class="sw"><div class="chip" style="background: #0f6b5c;"></div><span class="hex">#0f6b5c</span></div>
+        <div class="sw"><div class="chip" style="background: #16211c;"></div><span class="hex">#16211c</span></div>
+      </div>
+      <p style="color: #5f6b63; font-size: 14px; margin-top: 16px;">Your existing palette carries over exactly. Nothing here is new.</p>
+    </div>
+
+    <div class="card" style="background: #16211c; border-color: #2c3d35;">
+      <div class="lbl" style="color: #8b9c94;">Dark surfaces — added</div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 18px;">
+        <div class="sw"><div class="chip" style="background: #101a16; border: 1px solid #2c3d35;"></div><span class="hex" style="color: #8b9c94;">#101a16</span></div>
+        <div class="sw"><div class="chip" style="background: #1c2a24; border: 1px solid #2c3d35;"></div><span class="hex" style="color: #8b9c94;">#1c2a24</span></div>
+        <div class="sw"><div class="chip" style="background: #38a68f;"></div><span class="hex" style="color: #8b9c94;">#38a68f</span></div>
+        <div class="sw"><div class="chip" style="background: #cdd8d2;"></div><span class="hex" style="color: #8b9c94;">#cdd8d2</span></div>
+      </div>
+      <p style="color: #8b9c94; font-size: 14px; margin-top: 16px;">Your ink and green, lifted enough to stay readable on dark. Three sections use them.</p>
+    </div>
+
+  </div>
+
+  <!-- MOTIF -->
+  <div class="card" style="background: #101a16; border-color: #2c3d35;">
+    <div class="lbl" style="color: #8b9c94;">The signal motif, extended</div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; margin-top: 20px; align-items: start;">
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="mono" style="font-size: 10px; color: #6b7d75; letter-spacing: 0.12em;">STATUS TAGS</span>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="mono" style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600;">INFO</span>
+          <span class="mono" style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600;">OK</span>
+          <span class="mono" style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600;">WARN</span>
+          <span class="mono" style="color: #e2755f; background: rgba(226,117,95,0.14); padding: 3px 8px; border-radius: 3px; font-size: 10px; font-weight: 600;">CRIT</span>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="mono" style="font-size: 10px; color: #6b7d75; letter-spacing: 0.12em;">SECTION MARKER</span>
+        <span class="mono" style="font-size: 12px; letter-spacing: 0.16em; color: #38a68f; text-transform: uppercase; display: flex; align-items: center; gap: 9px;">
+          <span style="width: 6px; height: 6px; border-radius: 50%; background: #38a68f; display: inline-block;"></span>
+          03 / Approach
+        </span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <span class="mono" style="font-size: 10px; color: #6b7d75; letter-spacing: 0.12em;">FIGURES</span>
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span class="disp" style="font-size: 32px; color: #38a68f; line-height: 1;">30+</span>
+          <span style="color: #8b9c94; font-size: 13px;">years hands-on</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="height: 1px; background: #2c3d35; margin: 24px 0 20px;"></div>
+
+    <p style="color: #8b9c94; font-size: 14px; max-width: 74ch;">
+      The live feed is the most distinctive thing on your current site, and it only appears once. Borrowing its language — mono type, status tags, the pulsing dot — for section markers, figures and pricing labels gives the whole page one voice instead of nine unrelated card grids.
+    </p>
+  </div>
+
+  <!-- PHOTOS -->
+  <div class="card">
+    <div class="lbl">Replacing the stock photography</div>
+    <div style="display: grid; grid-template-columns: 240px 1fr; gap: 26px; margin-top: 18px; align-items: center;">
+      <div style="background: #16211c; border-radius: 6px; height: 150px; display: flex; align-items: center; justify-content: center;">
+        <svg width="240" height="150" viewBox="0 0 240 150" fill="none">
+          <g stroke="#2c3d35" stroke-width="1">
+            <path d="M0 30h240M0 60h240M0 90h240M0 120h240M40 0v150M80 0v150M120 0v150M160 0v150M200 0v150"></path>
+          </g>
+          <g stroke="#38a68f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+            <rect x="78" y="46" width="84" height="62" rx="4"></rect>
+            <path d="M120 60v16M112 68h16"></path>
+            <path d="M88 92h12l4-8 6 16 4-8h32"></path>
+          </g>
+          <circle cx="163" cy="47" r="5" fill="#63c08a"></circle>
+        </svg>
+      </div>
+      <p style="color: #5f6b63; font-size: 15px;">
+        The five industry photographs are generic stock, loaded straight from Unsplash's servers on every visit. Drawn vignettes in your own stroke style cost nothing to load, can't disappear, don't tell a third party who visits you — and look deliberate rather than bought.
+      </p>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

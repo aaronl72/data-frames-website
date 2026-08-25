@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; letter-spacing: -0.02em; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .eyebrow { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 11px;
+               letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+    .pad { padding-left: 22px; padding-right: 22px; }
+    p { margin: 0; text-wrap: pretty; }
+
+    .logview { overflow: hidden; }
+    .logtrack { display: flex; flex-direction: column; animation: scrollLog 34s linear infinite; }
+    @keyframes scrollLog { from { transform: translateY(0); } to { transform: translateY(-50%); } }
+.marquee { position: relative; overflow: hidden; }
+    .marquee-track { display: flex; width: max-content; animation: marqueeScroll 52s linear infinite; }
+    @keyframes marqueeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .marquee-fade-l, .marquee-fade-r { position: absolute; top: 0; bottom: 0; width: 90px; pointer-events: none; }
+    .marquee-fade-l { left: 0; background: linear-gradient(to right, #101a16, rgba(16,26,22,0)); }
+    .marquee-fade-r { right: 0; background: linear-gradient(to left, #101a16, rgba(16,26,22,0)); }
+  </style>
+</helmet>
+
+<div>
+
+  <!-- dark: nav + hero -->
+  <div style="background: #16211c; color: #cdd8d2;">
+
+    <div class="pad" style="display: flex; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; border-bottom: 1px solid #2c3d35;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <svg width="22" height="22" viewBox="0 0 32 32" fill="none" stroke="#38a68f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.3 7 L1.5 16 L9.3 25"></path>
+          <circle cx="16" cy="16" r="6"></circle>
+          <path d="M22.7 7 L30.5 16 L22.7 25"></path>
+        </svg>
+        <span class="disp" style="font-size: 19px; color: #ffffff; letter-spacing: 0;">Data-Frames</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 4px; padding: 8px;">
+        <span style="width: 20px; height: 1.5px; background: #8b9c94; display: block;"></span>
+        <span style="width: 20px; height: 1.5px; background: #8b9c94; display: block;"></span>
+      </div>
+    </div>
+
+    <!-- continuous credibility marquee -->
+    <div style="border-top: 1px solid #2c3d35; background: #101a16; padding-top: 8px; padding-bottom: 10px; overflow: hidden;">
+      <div class="pad" style="margin-bottom: 3px; line-height: 1;">
+        <span class="mono" style="font-size: 10px; letter-spacing: 0.16em; color: #6b7d75; text-transform: uppercase;">Built on open source &middot; recognized frameworks</span>
+      </div>
+      <div class="marquee">
+        <div class="marquee-track">
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="wazuh.svg" alt="" style="height: 26px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="color: #cdd8d2; font-size: 17px; font-weight: 600; white-space: nowrap;">NIST CSF</span>
+              <span class="mono" style="color: #6b7d75; font-size: 10px; white-space: nowrap;">Govern · Detect · Respond</span>
+            </div>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="metasploit.svg" alt="" style="height: 22px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="color: #cdd8d2; font-size: 17px; font-weight: 600; white-space: nowrap;">CIS Controls</span>
+              <span class="mono" style="color: #6b7d75; font-size: 10px; white-space: nowrap;">Prioritized safeguards</span>
+            </div>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="shuffle_topleft.svg" alt="" style="height: 27px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="color: #cdd8d2; font-size: 17px; font-weight: 600; white-space: nowrap;">MITRE ATT&amp;CK</span>
+              <span class="mono" style="color: #6b7d75; font-size: 10px; white-space: nowrap;">Real attacker techniques</span>
+            </div>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="tpot.png" alt="" style="height: 31px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="wazuh.svg" alt="" style="height: 26px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="color: #cdd8d2; font-size: 17px; font-weight: 600; white-space: nowrap;">NIST CSF</span>
+              <span class="mono" style="color: #6b7d75; font-size: 10px; white-space: nowrap;">Govern · Detect · Respond</span>
+            </div>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="metasploit.svg" alt="" style="height: 22px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="color: #cdd8d2; font-size: 17px; font-weight: 600; white-space: nowrap;">CIS Controls</span>
+              <span class="mono" style="color: #6b7d75; font-size: 10px; white-space: nowrap;">Prioritized safeguards</span>
+            </div>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="shuffle_topleft.svg" alt="" style="height: 27px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <div style="display: flex; flex-direction: column; gap: 2px;">
+              <span style="color: #cdd8d2; font-size: 17px; font-weight: 600; white-space: nowrap;">MITRE ATT&amp;CK</span>
+              <span class="mono" style="color: #6b7d75; font-size: 10px; white-space: nowrap;">Real attacker techniques</span>
+            </div>
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        <div style="flex-shrink: 0; display: flex; align-items: center; gap: 38px; margin-right: 38px;">
+            <img src="tpot.png" alt="" style="height: 31px; width: auto; opacity: 0.8; display: block;">
+            <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0; display: block;"></span>
+        </div>
+        </div>
+        <div class="marquee-fade-l"></div>
+        <div class="marquee-fade-r"></div>
+      </div>
+    </div>
+
+    <div class="pad" style="padding-top: 30px; padding-bottom: 28px;">
+      <div class="eyebrow" style="color: #38a68f; display: flex; align-items: center; gap: 8px;">
+        <span style="width: 5px; height: 5px; border-radius: 50%; background: #38a68f; display: inline-block;"></span>
+        SMB Cybersecurity
+      </div>
+      <h1 class="disp" style="font-size: 34px; line-height: 1.08; color: #ffffff; margin: 18px 0 0;">
+        Enterprise-level security.<br>
+        <span style="color: #38a68f; font-style: italic;">SMB-friendly pricing.</span>
+      </h1>
+      <p style="color: #a8b8b0; font-size: 15.5px; line-height: 1.5; margin-top: 14px;">
+        Continuous threat detection, real offensive testing, and automated response — without an in-house security team.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 22px;">
+        <div style="background: #38a68f; color: #10201b; padding: 15px; border-radius: 4px; font-weight: 600; font-size: 15px; text-align: center;">Request a Consultation</div>
+        <div style="border: 1px solid #3d5148; color: #cdd8d2; padding: 15px; border-radius: 4px; font-weight: 600; font-size: 15px; text-align: center;">See What We Monitor</div>
+      </div>
+    </div>
+
+    <div class="pad" style="padding-bottom: 28px;">
+      <div style="background: #101a16; border: 1px solid #2c3d35; border-radius: 10px; overflow: hidden;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-bottom: 1px solid #2c3d35; background: #16211c;">
+          <div class="mono" style="font-size: 10px; color: #8b9c94; letter-spacing: 0.1em; display: flex; align-items: center; gap: 8px;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: #63c08a; box-shadow: 0 0 8px rgba(99,192,138,0.6); display: inline-block;"></span>
+            LIVE SIGNAL FEED
+          </div>
+          <div style="display: flex; gap: 4px;">
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: #2c3d35; display: inline-block;"></span>
+            <span style="width: 6px; height: 6px; border-radius: 50%; background: #2c3d35; display: inline-block;"></span>
+          </div>
+        </div>
+        <div class="mono" style="padding: 5px 0; font-size: 10.5px; line-height: 1.45;">
+          <div class="logview" style="height: 152px;">
+            <div class="logtrack">
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:11</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[WAZUH] Agent 0042 checked in — rules updated</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:19</span>
+              <span style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">OK</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[AUTH] MFA challenge succeeded — user jsmith</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:34</span>
+              <span style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">WARN</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[FIM] Integrity change — /etc/passwd</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:41</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[NET] Outbound connection — TLS 1.3, port 443</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; background: rgba(226,117,95,0.06); border-left: 2px solid #e2755f;">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:55</span>
+              <span style="color: #e2755f; background: rgba(226,117,95,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">CRIT</span>
+              <span style="color: #e6b3a8; overflow: hidden; text-overflow: ellipsis;">[IDS] SQLi attempt blocked</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:02</span>
+              <span style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">OK</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[SHUFFLE] Playbook isolate-host completed</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:14</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[VULN] Scan started — 214 hosts</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:27</span>
+              <span style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">WARN</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[LOGIN] 5 failed attempts — 203.0.113.44</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; background: rgba(226,117,95,0.06); border-left: 2px solid #e2755f;">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:39</span>
+              <span style="color: #e2755f; background: rgba(226,117,95,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">CRIT</span>
+              <span style="color: #e6b3a8; overflow: hidden; text-overflow: ellipsis;">[HONEYPOT] SSH brute-force on decoy host</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:52</span>
+              <span style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">OK</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[PATCH] CVE-2026-11029 deployed</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:04:08</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[REPORT] Weekly summary generated</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:04:20</span>
+              <span style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">WARN</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[FW] Port scan detected — rate-limited</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:11</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[WAZUH] Agent 0042 checked in — rules updated</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:19</span>
+              <span style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">OK</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[AUTH] MFA challenge succeeded — user jsmith</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:34</span>
+              <span style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">WARN</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[FIM] Integrity change — /etc/passwd</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:41</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[NET] Outbound connection — TLS 1.3, port 443</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; background: rgba(226,117,95,0.06); border-left: 2px solid #e2755f;">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:02:55</span>
+              <span style="color: #e2755f; background: rgba(226,117,95,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">CRIT</span>
+              <span style="color: #e6b3a8; overflow: hidden; text-overflow: ellipsis;">[IDS] SQLi attempt blocked</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:02</span>
+              <span style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">OK</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[SHUFFLE] Playbook isolate-host completed</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:14</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[VULN] Scan started — 214 hosts</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:27</span>
+              <span style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">WARN</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[LOGIN] 5 failed attempts — 203.0.113.44</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; background: rgba(226,117,95,0.06); border-left: 2px solid #e2755f;">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:39</span>
+              <span style="color: #e2755f; background: rgba(226,117,95,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">CRIT</span>
+              <span style="color: #e6b3a8; overflow: hidden; text-overflow: ellipsis;">[HONEYPOT] SSH brute-force on decoy host</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:03:52</span>
+              <span style="color: #63c08a; background: rgba(99,192,138,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">OK</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[PATCH] CVE-2026-11029 deployed</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:04:08</span>
+              <span style="color: #38a68f; background: rgba(56,166,143,0.12); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">INFO</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[REPORT] Weekly summary generated</span>
+            </div>
+            <div style="display: flex; gap: 8px; padding: 6px 14px; white-space: nowrap; align-items: baseline; ">
+              <span style="color: #6b7d75; flex-shrink: 0;">14:04:20</span>
+              <span style="color: #d5a44f; background: rgba(213,164,79,0.14); padding: 1px 6px; border-radius: 3px; font-size: 9px; font-weight: 600; flex-shrink: 0;">WARN</span>
+              <span style="color: #9aaba3; overflow: hidden; text-overflow: ellipsis;">[FW] Port scan detected — rate-limited</span>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- light: services -->
+  <div class="pad" style="background: #f7f5f1; padding-top: 52px; padding-bottom: 52px;">
+    <div class="eyebrow" style="color: #0f6b5c;">01 / Services</div>
+    <h2 class="disp" style="font-size: 34px; line-height: 1.1; color: #16211c; margin: 12px 0 0;">Full-stack defense, built for SMB budgets</h2>
+
+    <div style="display: flex; flex-direction: column; gap: 14px; margin-top: 30px;">
+
+      <div style="background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f6b5c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 13h4l2.5-6 3 12 2.5-6h6"></path>
+        </svg>
+        <div style="font-size: 17px; font-weight: 600; color: #16211c;">Threat Detection &amp; SIEM</div>
+        <p style="color: #5f6b63; font-size: 14.5px;">Logs correlated across your environment in real time. Intrusions caught as they happen.</p>
+        <div class="mono" style="padding-top: 10px; font-size: 11px; color: #5f6b63; letter-spacing: 0.06em;">WAZUH</div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f6b5c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3l7 3v5.5c0 4.3-3 8-7 9.5-4-1.5-7-5.2-7-9.5V6l7-3z"></path>
+          <path d="M9.5 12l1.8 1.8 3.4-3.6"></path>
+        </svg>
+        <div style="font-size: 17px; font-weight: 600; color: #16211c;">Penetration Testing</div>
+        <p style="color: #5f6b63; font-size: 14.5px;">Real attacker techniques against your own systems. Gaps found before someone else finds them.</p>
+        <div class="mono" style="padding-top: 10px; font-size: 11px; color: #5f6b63; letter-spacing: 0.06em;">METASPLOIT</div>
+      </div>
+
+      <div style="background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; padding: 24px; display: flex; flex-direction: column; gap: 10px;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f6b5c" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M13 3l-1.5 7h5L11 21l1.5-7h-5L13 3z"></path>
+        </svg>
+        <div style="font-size: 17px; font-weight: 600; color: #16211c;">Automation &amp; Response</div>
+        <p style="color: #5f6b63; font-size: 14.5px;">An alert becomes a containment action immediately — no waiting on a human.</p>
+        <div class="mono" style="padding-top: 10px; font-size: 11px; color: #5f6b63; letter-spacing: 0.06em;">SHUFFLE</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
