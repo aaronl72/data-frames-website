@@ -356,6 +356,10 @@
   }
   .form-submit:hover { background: var(--accent-dim); }
   .form-status { font-size: 0.85rem; color: var(--accent-dim); font-weight: 600; display: none; }
+  .form-status.error { color: var(--red); }
+  .form-status.error a { color: var(--red); }
+  .form-detail { font-weight: 400; opacity: 0.8; }
+  .form-submit[disabled] { opacity: 0.6; cursor: default; }
   .field { display: flex; flex-direction: column; }
   .visually-hidden {
     position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -719,7 +723,7 @@
         <p>Tell us a bit about your business and current setup. We'll follow up to schedule a scoping call — no obligation.</p>
         <a class="email" href="mailto:aaron@data-frames.com">aaron@data-frames.com</a>
       </div>
-      <form id="contactForm">
+      <form id="contactForm" action="https://formsubmit.co/aaron@data-frames.com" method="POST">
         <div class="form-row">
           <div class="field">
             <label class="visually-hidden" for="f-name">Name</label>
@@ -744,6 +748,10 @@
           <label class="visually-hidden" for="f-message">What does your current environment look like?</label>
           <textarea id="f-message" name="message" placeholder="What does your current environment look like?" required></textarea>
         </div>
+        <input type="hidden" name="_subject" value="New enquiry from data-frames.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://data-frames.com/#contact">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none;">
         <button type="submit" class="form-submit">Send</button>
         <div class="form-status" id="formStatus" role="status" aria-live="polite">Thanks — we'll be in touch shortly.</div>
       </form>
@@ -795,8 +803,51 @@
 
   document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    document.getElementById('formStatus').style.display = 'block';
-    this.reset();
+    var form = this;
+    var status = document.getElementById('formStatus');
+    var button = form.querySelector('.form-submit');
+    var isLocal = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+
+    function fail(detail) {
+      status.classList.add('error');
+      status.innerHTML = "Sorry, that didn't send. Please email " +
+        '<a href="mailto:aaron@data-frames.com">aaron@data-frames.com</a> directly.';
+      if (detail) {
+        if (window.console) { console.error('Contact form failed:', detail); }
+        if (isLocal) {
+          var note = document.createElement('span');
+          note.className = 'form-detail';
+          note.textContent = ' [' + detail + ']';
+          status.appendChild(note);
+        }
+      }
+    }
+
+    status.classList.remove('error');
+    status.textContent = 'Sending…';
+    status.style.display = 'block';
+    button.disabled = true;
+
+    fetch('https://formsubmit.co/ajax/aaron@data-frames.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new URLSearchParams(new FormData(form))
+    })
+      .then(function(res) {
+        if (!res.ok) { throw new Error('Server returned ' + res.status); }
+        return res.json();
+      })
+      .then(function(data) {
+        // FormSubmit answers with HTTP 200 even when it refuses the message,
+        // flagging it as the string "false" in the body. Trust the body, not the status.
+        if (!data || String(data.success) !== 'true') {
+          throw new Error((data && data.message) || 'Delivery was refused.');
+        }
+        status.textContent = "Thanks — we'll be in touch shortly.";
+        form.reset();
+      })
+      .catch(function(err) { fail(err && err.message ? err.message : ''); })
+      .then(function() { button.disabled = false; });
   });
 </script>
 
