@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .lock { display: inline-flex; align-items: stretch; }
+    .rest { font-weight: 700; letter-spacing: -0.02em; line-height: 1; align-self: center; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W14</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Counter</h1>
+  </div>
+
+  <div class="panel" style="padding: 44px 26px; display: flex; align-items: center; justify-content: center;">
+    <div class="lock" style="gap: 5px;">
+      <svg width="62" height="72" viewBox="0 0 62 72" fill="none" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0 H28 A34 36 0 0 1 28 72 H0 Z M14 14 V58 H27 A22 22 0 0 0 27 14 Z" fill="#16211c"/>
+        <rect x="17" y="38" width="6" height="12" fill="#0f6b5c"/>
+        <rect x="26" y="32" width="6" height="18" fill="#0f6b5c"/>
+        <rect x="35" y="24" width="6" height="26" fill="#0f6b5c"/>
+      </svg>
+      <span class="rest" style="font-size: 51px; color: #16211c;">ATA-FRAMES</span>
+    </div>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 44px 26px; display: flex; align-items: center; justify-content: center;">
+    <div class="lock" style="gap: 5px;">
+      <svg width="62" height="72" viewBox="0 0 62 72" fill="none" aria-hidden="true">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0 H28 A34 36 0 0 1 28 72 H0 Z M14 14 V58 H27 A22 22 0 0 0 27 14 Z" fill="#ffffff"/>
+        <rect x="17" y="38" width="6" height="12" fill="#38a68f"/>
+        <rect x="26" y="32" width="6" height="18" fill="#38a68f"/>
+        <rect x="35" y="24" width="6" height="26" fill="#38a68f"/>
+      </svg>
+      <span class="rest" style="font-size: 51px; color: #ffffff;">ATA-FRAMES</span>
+    </div>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 26px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="lock" style="gap: 2px;">
+          <svg width="26" height="30" viewBox="0 0 62 72" fill="none" aria-hidden="true">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0 H28 A34 36 0 0 1 28 72 H0 Z M14 14 V58 H27 A22 22 0 0 0 27 14 Z" fill="#16211c"/>
+            <rect x="17" y="38" width="6" height="12" fill="#0f6b5c"/>
+            <rect x="26" y="32" width="6" height="18" fill="#0f6b5c"/>
+            <rect x="35" y="24" width="6" height="26" fill="#0f6b5c"/>
+          </svg>
+          <span class="rest" style="font-size: 21px; color: #16211c;">ATA-FRAMES</span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">165px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <svg width="28" height="32" viewBox="0 0 62 72" fill="none" aria-hidden="true">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0 H28 A34 36 0 0 1 28 72 H0 Z M14 14 V58 H27 A22 22 0 0 0 27 14 Z" fill="#16211c"/>
+          <rect x="17" y="38" width="6" height="12" fill="#0f6b5c"/>
+          <rect x="26" y="32" width="6" height="18" fill="#0f6b5c"/>
+          <rect x="35" y="24" width="6" height="26" fill="#0f6b5c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">32px, D only</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">The D is a finished app icon on its own &mdash; nothing to redraw.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>W4 put the data in the hyphen. This puts it inside the D &mdash; the letter drawn rather than typed, its bowl opened up so three bars can stand in the counter. The mark is not attached to the name, it is the first letter of it, so there is no lockup to police and no clear-space rule to break. And the D detaches cleanly: it is a square, finished app icon at 32px without a redraw, which is the gap the rest of this round keeps admitting to.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>A custom first letter means the wordmark can never be typed &mdash; every use is an asset someone has to find the right file for, and the drawn D will never match IBM Plex exactly next to it. Bar charts in letterforms are also well-trodden ground in data companies, and this is a security firm, so the graph inside the D is arguably telling the wrong story about the work.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .spec { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-weight: 500;
+            letter-spacing: 0.36em; white-space: nowrap; line-height: 1; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W12</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Specimen</h1>
+  </div>
+
+  <div class="panel" style="padding: 52px 24px; display: flex; align-items: center; justify-content: center;">
+    <span class="spec" style="font-size: 25px; color: #16211c; padding-left: 0.36em;">DATA<span style="color: #0f6b5c;">-</span>FRAMES</span>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 52px 24px; display: flex; align-items: center; justify-content: center;">
+    <span class="spec" style="font-size: 25px; color: #ffffff; padding-left: 0.36em;">DATA<span style="color: #38a68f;">-</span>FRAMES</span>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 26px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="spec" style="font-size: 13px; color: #16211c;">DATA<span style="color: #0f6b5c;">-</span>FRAMES</span>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">135px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="spec" style="font-size: 8px; color: #16211c;">DATA<span style="color: #0f6b5c;">-</span>FRAMES</span>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">85px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">Wide tracking is what saves it small &mdash; the letters never touch.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>The name with nothing done to it except space. Caps, monospaced, tracked out to the width of a caption &mdash; the way a model number is set on the back of a piece of equipment, or a title on an architectural drawing. It is the most restrained mark of the sixteen and the most confident, because it has nowhere to hide. Wide tracking also means the letters never collide, so it survives small better than any of the tight-set options.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>Restraint reads as absence to a lot of people, and this is the board most likely to be mistaken for a placeholder &mdash; the same objection that killed the quiet options in the first round. It is also very wide, which makes it the worst fit of the sixteen for a narrow header, and it has no square form at all.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -208,6 +208,78 @@
       "title": "W8 — The Corners"
     },
     {
+      "file": "DirectionW9.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 7440,
+      "w": 560,
+      "h": 960,
+      "title": "W9 — The Monogram"
+    },
+    {
+      "file": "DirectionW10.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 7440,
+      "w": 560,
+      "h": 960,
+      "title": "W10 — The Slice"
+    },
+    {
+      "file": "DirectionW11.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 7440,
+      "w": 560,
+      "h": 960,
+      "title": "W11 — The Justified Block"
+    },
+    {
+      "file": "DirectionW12.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 7440,
+      "w": 560,
+      "h": 960,
+      "title": "W12 — The Specimen"
+    },
+    {
+      "file": "DirectionW13.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 8680,
+      "w": 560,
+      "h": 960,
+      "title": "W13 — The Baseline"
+    },
+    {
+      "file": "DirectionW14.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 8680,
+      "w": 560,
+      "h": 960,
+      "title": "W14 — The Counter"
+    },
+    {
+      "file": "DirectionW15.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 8680,
+      "w": 560,
+      "h": 960,
+      "title": "W15 — The Weight Shift"
+    },
+    {
+      "file": "DirectionW16.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 8680,
+      "w": 560,
+      "h": 960,
+      "title": "W16 — The Descriptor"
+    },
+    {
       "file": "Main.dc.html",
       "page": "page-2",
       "x": 0,
@@ -272,7 +344,7 @@
       "x": 0,
       "y": -230,
       "w": 700,
-      "text": "Fifteen marks. The bottom row is the picture-frame-plus-data brief — start there if that is what you want to judge.\n\nEverything above it is the earlier exploration, all built on the same quality: mass. Every board says what it costs you as well as what it gives you."
+      "text": "Fifteen marks. The fourth row is the picture-frame-plus-data brief — start there if that is what you want to judge.\n\nEverything above it is the earlier exploration, all built on the same quality: mass. Every board says what it costs you as well as what it gives you."
     },
     {
       "id": "note-second-row",
@@ -305,6 +377,14 @@
       "y": 4730,
       "w": 700,
       "text": "The name as the logo. Four with some kind of border, four without — a full frame, a solid plaque, rules above and below, a data glyph for the hyphen, your own italic accent, a terminal prompt, a stacked imprint, and two corners doing the work of four."
+    },
+    {
+      "id": "note-wordmarks-two",
+      "page": "page-1",
+      "x": 0,
+      "y": 7210,
+      "w": 700,
+      "text": "Eight more of the same kind. This set goes after the complaint nearly every board above it makes in its own tradeoff — no square version — so four of these have one: the monogram, the justified block, the drawn D, and the slice.\n\nThe range is deliberate. W10 is the loudest thing on the canvas and W12 and W15 are close to doing nothing at all; that restraint is the argument they are making, not a failure to try."
     },
     {
       "id": "note-package",

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .desc { display: inline-flex; flex-direction: column; align-items: center; }
+    .sub { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-weight: 500;
+           text-transform: uppercase; white-space: nowrap; line-height: 1; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W16</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Descriptor</h1>
+  </div>
+
+  <div class="panel" style="padding: 42px 22px; display: flex; align-items: center; justify-content: center;">
+    <div class="desc" style="gap: 12px;">
+      <span class="disp" style="font-size: 52px; line-height: 1; color: #16211c; letter-spacing: -0.015em;">Data-Frames</span>
+      <span class="sub" style="font-size: 10.5px; letter-spacing: 0.235em; color: #0f6b5c; padding-left: 0.235em;">SECURITY OPERATIONS</span>
+    </div>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 42px 22px; display: flex; align-items: center; justify-content: center;">
+    <div class="desc" style="gap: 12px;">
+      <span class="disp" style="font-size: 52px; line-height: 1; color: #ffffff; letter-spacing: -0.015em;">Data-Frames</span>
+      <span class="sub" style="font-size: 10.5px; letter-spacing: 0.235em; color: #38a68f; padding-left: 0.235em;">SECURITY OPERATIONS</span>
+    </div>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 26px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="desc" style="gap: 6px;">
+          <span class="disp" style="font-size: 27px; line-height: 1; color: #16211c;">Data-Frames</span>
+          <span class="sub" style="font-size: 5.5px; letter-spacing: 0.235em; color: #0f6b5c; padding-left: 0.235em;">SECURITY OPERATIONS</span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">150px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="disp" style="font-size: 17px; line-height: 1; color: #16211c;">Data-Frames</span>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">95px, line dropped</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">The descriptor has to come off below about 130px &mdash; it fills in.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>Nothing on the site tells a stranger what you sell in the first half second, and the logo is the one thing that appears on every surface. This puts the answer in the mark: the name in your display serif, and a tracked mono line beneath it, set to the exact width of the name so the pair reads as one object rather than a caption. It is the version that actually earns its place on a business card, a slide and a proposal cover, where the name alone leaves the reader guessing.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>Two-part lockups always need a one-part version, so you end up maintaining both and the descriptor gets dropped exactly where it would have helped most &mdash; small sizes. The words are also a commitment: &ldquo;Security Operations&rdquo; is the positioning for now, and if the offer widens the logo is what has to be reissued.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
