@@ -3,6 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Guest list for the browser: only these sources may load. Scripts and styles are
+     inline in this file, so 'unsafe-inline' is required until they move to their own
+     files; the policy still blocks any externally hosted script from running.
+     frame-ancestors is deliberately absent - it only works as a real HTTP header, which
+     GitHub Pages does not let us set. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src https://formsubmit.co; form-action https://formsubmit.co; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<!-- Send our origin but never the path to third parties. Not 'no-referrer': FormSubmit
+     may use the referrer for abuse checks, and the contact form is the lead pipeline. -->
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>Data-Frames | Enterprise-Level Security, SMB-Friendly Pricing</title>
 <meta name="description" content="Data-Frames brings continuous threat detection, real offensive testing, and automated response to small businesses — enterprise-level security at SMB-friendly pricing.">
 <meta property="og:title" content="Data-Frames | Enterprise-Level Security, SMB-Friendly Pricing">
