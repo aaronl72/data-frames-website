@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .plq { display: inline-flex; align-items: center; background: #16211c; font-weight: 700;
+           letter-spacing: 0.01em; line-height: 1; color: #f7f5f1; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W2</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Plaque</h1>
+  </div>
+
+  <div class="panel" style="padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div class="plq" style="padding: 16px 22px; font-size: 27px; gap: 10px;">
+      <span>DATA</span><span style="width: 16px; height: 7px; background: #38a68f;"></span><span>FRAMES</span>
+    </div>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div class="plq" style="padding: 16px 22px; font-size: 27px; gap: 10px; background: #38a68f; color: #10201b;">
+      <span>DATA</span><span style="width: 16px; height: 7px; background: #10201b;"></span><span>FRAMES</span>
+    </div>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 28px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="plq" style="padding: 9px 13px; font-size: 16px; gap: 6px;">
+          <span>DATA</span><span style="width: 10px; height: 4px; background: #38a68f;"></span><span>FRAMES</span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">200px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="plq" style="padding: 6px 8px; font-size: 10px; gap: 4px;">
+          <span>DATA</span><span style="width: 6px; height: 3px; background: #38a68f;"></span><span>FRAMES</span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">130px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">Reversed type stops being readable below about 120px wide.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>A nameplate. The name knocked out of a solid slab, with the hyphen doing its job as a green bar. It has the most physical presence of the eight &mdash; it reads as something screwed to a door rather than typed on a screen, which suits a firm people let into their building.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>A solid dark slab is heavy on a page and awkward on any background that is not plain. Reversed type also loses legibility faster than positive type as it shrinks.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

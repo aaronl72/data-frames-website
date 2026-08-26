@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Direction G</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Sweep</h1>
+  </div>
+
+  <div class="panel" style="padding: 30px; display: flex; align-items: center; justify-content: center;">
+    <svg width="116" height="116" viewBox="0 0 48 48" fill="none" aria-label="Data-Frames sweep mark">
+      <circle cx="24" cy="24" r="15" stroke="#16211c" stroke-width="7.5" stroke-dasharray="83.75 10.5" transform="rotate(-62.5 24 24)"/>
+      <circle cx="37.2" cy="17" r="5" fill="#0f6b5c" transform="rotate(-62.5 24 24)"/>
+    </svg>
+  </div>
+
+  <div class="panel" style="padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <circle cx="24" cy="24" r="15" stroke="#16211c" stroke-width="7.5" stroke-dasharray="83.75 10.5" transform="rotate(-62.5 24 24)"/>
+      <circle cx="37.2" cy="17" r="5" fill="#0f6b5c" transform="rotate(-62.5 24 24)"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #16211c;">Data-Frames</span>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="44" height="44" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <circle cx="24" cy="24" r="15" stroke="#cdd8d2" stroke-width="7.5" stroke-dasharray="83.75 10.5" transform="rotate(-62.5 24 24)"/>
+      <circle cx="37.2" cy="17" r="5" fill="#38a68f" transform="rotate(-62.5 24 24)"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #ffffff;">Data-Frames</span>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 30px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="15" stroke="#16211c" stroke-width="7.5" stroke-dasharray="83.75 10.5" transform="rotate(-62.5 24 24)"/>
+          <circle cx="37.2" cy="17" r="5" fill="#0f6b5c" transform="rotate(-62.5 24 24)"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">48</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="15" stroke="#16211c" stroke-width="7.5" stroke-dasharray="83.75 10.5" transform="rotate(-62.5 24 24)"/>
+          <circle cx="37.2" cy="17" r="5" fill="#0f6b5c" transform="rotate(-62.5 24 24)"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">32</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="15" stroke="#16211c" stroke-width="7.5" stroke-dasharray="83.75 10.5" transform="rotate(-62.5 24 24)"/>
+          <circle cx="37.2" cy="17" r="5" fill="#0f6b5c" transform="rotate(-62.5 24 24)"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">16</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px;">
+        <span style="font-size: 13px; color: #5f6b63;">Heavy enough to survive, and the dot still separates from the ring.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>The category&#39;s other memorable move is motion &mdash; Trend Micro and Zscaler both sell continuous activity with a sweep. Here the ring is the watch, the break is where it is looking now, and the green dot is what it just found. Thick stroke, so it has the mass the first four lacked.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>A broken ring is one degree away from a loading spinner, and radar is a well-worn security metaphor. It is the most conventional idea of these four.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,340 @@
+{
+  "artboards": [
+    {
+      "file": "DirectionE.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 0,
+      "w": 560,
+      "h": 960,
+      "title": "E — The Stamp"
+    },
+    {
+      "file": "DirectionF.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 0,
+      "w": 560,
+      "h": 960,
+      "title": "F — The Letter"
+    },
+    {
+      "file": "DirectionG.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 0,
+      "w": 560,
+      "h": 960,
+      "title": "G — The Sweep"
+    },
+    {
+      "file": "DirectionH.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 0,
+      "w": 560,
+      "h": 960,
+      "title": "H — The Stack"
+    },
+    {
+      "file": "DirectionI.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 1240,
+      "w": 560,
+      "h": 960,
+      "title": "I — The Rows"
+    },
+    {
+      "file": "DirectionJ.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 1240,
+      "w": 560,
+      "h": 960,
+      "title": "J — The Iris"
+    },
+    {
+      "file": "DirectionK.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 1240,
+      "w": 560,
+      "h": 960,
+      "title": "K — The Fault"
+    },
+    {
+      "file": "DirectionM.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 2480,
+      "w": 560,
+      "h": 960,
+      "title": "M — The Eye"
+    },
+    {
+      "file": "DirectionN.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 2480,
+      "w": 560,
+      "h": 960,
+      "title": "N — The Stencil"
+    },
+    {
+      "file": "DirectionO.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 2480,
+      "w": 560,
+      "h": 960,
+      "title": "O — The Layers"
+    },
+    {
+      "file": "DirectionP.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 2480,
+      "w": 560,
+      "h": 960,
+      "title": "P — The Trace"
+    },
+    {
+      "file": "DirectionQ.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 3720,
+      "w": 560,
+      "h": 960,
+      "title": "Q — The Gallery"
+    },
+    {
+      "file": "DirectionR.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 3720,
+      "w": 560,
+      "h": 960,
+      "title": "R — The Mount"
+    },
+    {
+      "file": "DirectionS.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 3720,
+      "w": 560,
+      "h": 960,
+      "title": "S — The Breakout"
+    },
+    {
+      "file": "DirectionT.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 3720,
+      "w": 560,
+      "h": 960,
+      "title": "T — The Archive"
+    },
+    {
+      "file": "DirectionW1.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 4960,
+      "w": 560,
+      "h": 960,
+      "title": "W1 — Framed"
+    },
+    {
+      "file": "DirectionW2.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 4960,
+      "w": 560,
+      "h": 960,
+      "title": "W2 — The Plaque"
+    },
+    {
+      "file": "DirectionW3.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 4960,
+      "w": 560,
+      "h": 960,
+      "title": "W3 — The Masthead"
+    },
+    {
+      "file": "DirectionW4.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 4960,
+      "w": 560,
+      "h": 960,
+      "title": "W4 — The Data Hyphen"
+    },
+    {
+      "file": "DirectionW5.dc.html",
+      "page": "page-1",
+      "x": 0,
+      "y": 6200,
+      "w": 560,
+      "h": 960,
+      "title": "W5 — The House Voice"
+    },
+    {
+      "file": "DirectionW6.dc.html",
+      "page": "page-1",
+      "x": 640,
+      "y": 6200,
+      "w": 560,
+      "h": 960,
+      "title": "W6 — The Prompt"
+    },
+    {
+      "file": "DirectionW7.dc.html",
+      "page": "page-1",
+      "x": 1280,
+      "y": 6200,
+      "w": 560,
+      "h": 960,
+      "title": "W7 — The Colophon Stack"
+    },
+    {
+      "file": "DirectionW8.dc.html",
+      "page": "page-1",
+      "x": 1920,
+      "y": 6200,
+      "w": 560,
+      "h": 960,
+      "title": "W8 — The Corners"
+    },
+    {
+      "file": "Main.dc.html",
+      "page": "page-2",
+      "x": 0,
+      "y": 0,
+      "w": 1000,
+      "h": 2420,
+      "title": "Brand sheet",
+      "print": "flow"
+    },
+    {
+      "file": "CardFront.dc.html",
+      "page": "page-2",
+      "x": 1120,
+      "y": 0,
+      "w": 336,
+      "h": 192,
+      "title": "Business card — front",
+      "print": "fixed"
+    },
+    {
+      "file": "CardBack.dc.html",
+      "page": "page-2",
+      "x": 1536,
+      "y": 0,
+      "w": 336,
+      "h": 192,
+      "title": "Business card — back",
+      "print": "fixed"
+    },
+    {
+      "file": "Avatar.dc.html",
+      "page": "page-2",
+      "x": 1120,
+      "y": 340,
+      "w": 400,
+      "h": 400,
+      "title": "Profile picture — 400px"
+    },
+    {
+      "file": "Slide.dc.html",
+      "page": "page-2",
+      "x": 1600,
+      "y": 340,
+      "w": 1280,
+      "h": 720,
+      "title": "Title slide — 16:9"
+    },
+    {
+      "file": "Banner.dc.html",
+      "page": "page-2",
+      "x": 1120,
+      "y": 1180,
+      "w": 1584,
+      "h": 396,
+      "title": "LinkedIn banner — 1584×396"
+    }
+  ],
+  "annotations": [
+    {
+      "id": "note-directions",
+      "page": "page-1",
+      "x": 0,
+      "y": -230,
+      "w": 700,
+      "text": "Fifteen marks. The bottom row is the picture-frame-plus-data brief — start there if that is what you want to judge.\n\nEverything above it is the earlier exploration, all built on the same quality: mass. Every board says what it costs you as well as what it gives you."
+    },
+    {
+      "id": "note-second-row",
+      "page": "page-1",
+      "x": 0,
+      "y": 1010,
+      "w": 700,
+      "text": "Second set — the data itself, the frame with depth, and pure graphic abstraction."
+    },
+    {
+      "id": "note-third-row",
+      "page": "page-1",
+      "x": 0,
+      "y": 2250,
+      "w": 700,
+      "text": "Third set. Watching without the animal, the other half of the name cut out of solid ground, frames as layers, and the signal passing through."
+    },
+    {
+      "id": "note-fourth-row",
+      "page": "page-1",
+      "x": 0,
+      "y": 3490,
+      "w": 700,
+      "text": "Your brief: a picture frame and a data icon fused. Same chunky moulding on all four so they are judged on the data inside — a chart, a table, a trend line that will not stay in, and the database everyone already recognises."
+    },
+    {
+      "id": "note-wordmarks",
+      "page": "page-1",
+      "x": 0,
+      "y": 4730,
+      "w": 700,
+      "text": "The name as the logo. Four with some kind of border, four without — a full frame, a solid plaque, rules above and below, a data glyph for the hyphen, your own italic accent, a terminal prompt, a stacked imprint, and two corners doing the work of four."
+    },
+    {
+      "id": "note-package",
+      "page": "page-2",
+      "x": 0,
+      "y": -230,
+      "w": 700,
+      "text": "The reusable part — palette, type, spacing rules, and the pieces you would actually print or upload.\n\nThe mark shown throughout is an early placeholder, not a recommendation. Everything here rebuilds around whichever direction you pick."
+    },
+    {
+      "id": "note-pieces",
+      "page": "page-2",
+      "x": 1120,
+      "y": -230,
+      "w": 620,
+      "text": "These five are at true export sizes — the card is 3.5×2in, the avatar 400px, the banner is LinkedIn's 1584×396, the slide is 16:9.\n\nAnything in [square brackets] is a real fact I do not have."
+    }
+  ],
+  "launch": {
+    "view": "canvas",
+    "page": "page-1"
+  },
+  "pages": [
+    {
+      "id": "page-1",
+      "name": "Logo directions"
+    },
+    {
+      "id": "page-2",
+      "name": "Brand package"
+    }
+  ]
+}

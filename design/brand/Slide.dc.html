@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #16211c; color: #cdd8d2;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    a { color: #38a68f; text-decoration: none; }
+    a:hover { color: #63c08a; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    p, h1 { margin: 0; }
+  </style>
+</helmet>
+
+<!-- 1280 x 720, standard 16:9. Square-bracketed text is yours to fill in. -->
+<div style="width: 1280px; height: 720px; background: #16211c; box-sizing: border-box;
+            padding: 88px; display: flex; flex-direction: column;">
+
+  <span class="mono" style="font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #38a68f; font-weight: 500;">Quarterly security review</span>
+
+  <h1 class="disp" style="font-size: 78px; line-height: 1.04; color: #ffffff; letter-spacing: -0.02em; margin-top: 30px; max-width: 20ch; text-wrap: balance;">Where your estate stands, and what we are doing about it</h1>
+
+  <p style="font-size: 22px; line-height: 1.5; color: #8b9c94; margin-top: 26px; max-width: 52ch;">Twelve weeks of continuous monitoring, one offensive test, and the fixes that came out of both.</p>
+
+  <div style="flex-grow: 1;"></div>
+
+  <div style="height: 1px; background: #2c3d35;"></div>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; gap: 40px; padding-top: 26px;">
+    <div style="display: flex; align-items: center; gap: 14px;">
+      <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-label="Data-Frames">
+        <g stroke="#38a68f" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+          <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+          <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+        </g>
+        <circle cx="24" cy="24" r="5" fill="#38a68f"/>
+      </svg>
+      <span class="disp" style="font-size: 32px; line-height: 1; color: #ffffff;">Data-Frames</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 16px;">
+      <span class="mono" style="font-size: 14px; color: #6b7d75;">[Client name]</span>
+      <span style="width: 4px; height: 4px; border-radius: 50%; background: #2c3d35; flex-shrink: 0;"></span>
+      <span class="mono" style="font-size: 14px; color: #6b7d75;">[Month Year]</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

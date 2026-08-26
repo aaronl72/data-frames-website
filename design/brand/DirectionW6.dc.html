@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .term { display: inline-flex; align-items: center; font-family: 'IBM Plex Mono', Consolas, Menlo, monospace;
+            font-weight: 600; letter-spacing: -0.03em; line-height: 1; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W6</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Prompt</h1>
+  </div>
+
+  <div class="panel" style="padding: 44px; display: flex; align-items: center; justify-content: center;">
+    <span class="term" style="font-size: 34px; color: #16211c; gap: 8px;">data-frames<span style="width: 15px; height: 30px; background: #0f6b5c;"></span></span>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 44px; display: flex; align-items: center; justify-content: center;">
+    <span class="term" style="font-size: 34px; color: #cdd8d2; gap: 8px;">data-frames<span style="width: 15px; height: 30px; background: #38a68f;"></span></span>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 28px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="term" style="font-size: 18px; color: #16211c; gap: 4px;">data-frames<span style="width: 8px; height: 16px; background: #0f6b5c;"></span></span>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">190px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <span class="term" style="font-size: 11px; color: #16211c; gap: 3px;">data-frames<span style="width: 5px; height: 10px; background: #0f6b5c;"></span></span>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">120px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">Mono holds its shape small better than anything else here.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>Your domain, set the way it would be typed, with a cursor still blinking after it. Lowercase and monospaced says technical without saying it out loud, and it is the only option here that reads as though the people behind it actually work in a terminal. Mono also stays legible at sizes that kill the serif.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>Terminal-styled logos are common enough in security to be their own cliché, and lowercase reads as informal &mdash; possibly too informal for owners deciding whether to trust you with their network. The cursor also implies motion it will never have on paper.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

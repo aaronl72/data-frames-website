@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .wm { display: inline-flex; align-items: baseline; font-weight: 700; letter-spacing: -0.015em; line-height: 1; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W4</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Data Hyphen</h1>
+  </div>
+
+  <div class="panel" style="padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div class="wm" style="font-size: 34px; gap: 9px; color: #16211c;">
+      <span>DATA</span>
+      <svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true"><rect x="0" y="15" width="6" height="11" fill="#0f6b5c"/><rect x="9" y="6" width="6" height="20" fill="#0f6b5c"/><rect x="18" y="11" width="6" height="15" fill="#0f6b5c"/></svg>
+      <span>FRAMES</span>
+    </div>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div class="wm" style="font-size: 34px; gap: 9px; color: #ffffff;">
+      <span>DATA</span>
+      <svg width="24" height="26" viewBox="0 0 24 26" aria-hidden="true"><rect x="0" y="15" width="6" height="11" fill="#38a68f"/><rect x="9" y="6" width="6" height="20" fill="#38a68f"/><rect x="18" y="11" width="6" height="15" fill="#38a68f"/></svg>
+      <span>FRAMES</span>
+    </div>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 28px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="wm" style="font-size: 19px; gap: 5px; color: #16211c;">
+          <span>DATA</span><svg width="13" height="14" viewBox="0 0 24 26" aria-hidden="true"><rect x="0" y="15" width="6" height="11" fill="#0f6b5c"/><rect x="9" y="6" width="6" height="20" fill="#0f6b5c"/><rect x="18" y="11" width="6" height="15" fill="#0f6b5c"/></svg><span>FRAMES</span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">200px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="wm" style="font-size: 11px; gap: 3px; color: #16211c;">
+          <span>DATA</span><svg width="8" height="9" viewBox="0 0 24 26" aria-hidden="true"><rect x="0" y="15" width="6" height="11" fill="#0f6b5c"/><rect x="9" y="6" width="6" height="20" fill="#0f6b5c"/><rect x="18" y="11" width="6" height="15" fill="#0f6b5c"/></svg><span>FRAMES</span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">120px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">The three bars merge into one green blob under about 130px.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>The hyphen in your name is a free slot, and this puts the data in it. No separate symbol to place, no lockup rules to follow &mdash; the mark and the name are the same object, and the three bars can lift out on their own as an app icon when you need one.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>It is a joke that only works once you have read it, and it depends on people knowing the name has a hyphen at all. The bars also blur together at small sizes, which is exactly where a logo has to work hardest.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

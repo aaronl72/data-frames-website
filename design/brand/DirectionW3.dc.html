@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .mast { display: inline-flex; flex-direction: column; align-items: stretch; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W3</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Masthead</h1>
+  </div>
+
+  <div class="panel" style="padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div class="mast">
+      <span style="height: 5px; background: #0f6b5c;"></span>
+      <span class="disp" style="font-size: 46px; line-height: 1.18; color: #16211c; letter-spacing: -0.01em; padding: 4px 0;">Data-Frames</span>
+      <span style="height: 2px; background: #16211c;"></span>
+    </div>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div class="mast">
+      <span style="height: 5px; background: #38a68f;"></span>
+      <span class="disp" style="font-size: 46px; line-height: 1.18; color: #ffffff; letter-spacing: -0.01em; padding: 4px 0;">Data-Frames</span>
+      <span style="height: 2px; background: #cdd8d2;"></span>
+    </div>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 28px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="mast">
+          <span style="height: 3px; background: #0f6b5c;"></span>
+          <span class="disp" style="font-size: 24px; line-height: 1.18; color: #16211c; padding: 2px 0;">Data-Frames</span>
+          <span style="height: 1.4px; background: #16211c;"></span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">180px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div class="mast">
+          <span style="height: 2px; background: #0f6b5c;"></span>
+          <span class="disp" style="font-size: 15px; line-height: 1.2; color: #16211c; padding: 1px 0;">Data-Frames</span>
+          <span style="height: 1px; background: #16211c;"></span>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">115px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">The hairline under it is the first thing to disappear in print.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>Newspaper masthead logic: the name in your display serif, pinned between a heavy rule and a hairline. The two different weights are what make it look considered rather than boxed in, and it carries the editorial character of the site straight into the logo.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>It reads as a publication rather than a security firm, and rules that thin are unreliable &mdash; they drop out in print, on screens and in embroidery. It also has no square version at all.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

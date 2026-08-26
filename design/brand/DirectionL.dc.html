@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Direction L</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Watcher</h1>
+  </div>
+
+  <div class="panel" style="padding: 30px; display: flex; align-items: center; justify-content: center;">
+    <svg width="116" height="116" viewBox="0 0 48 48" aria-label="Data-Frames owl mark">
+      <path d="M12 8 L19 15 H29 L36 8 L40 14 V28 A16 16 0 0 1 8 28 V14 Z" fill="#16211c"/>
+      <circle cx="17" cy="23" r="6.5" fill="#0f6b5c"/>
+      <circle cx="31" cy="23" r="6.5" fill="#0f6b5c"/>
+      <path d="M24 30 L26.2 34 H21.8 Z" fill="#0f6b5c"/>
+    </svg>
+  </div>
+
+  <div class="panel" style="padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+      <path d="M12 8 L19 15 H29 L36 8 L40 14 V28 A16 16 0 0 1 8 28 V14 Z" fill="#16211c"/>
+      <circle cx="17" cy="23" r="6.5" fill="#0f6b5c"/><circle cx="31" cy="23" r="6.5" fill="#0f6b5c"/>
+      <path d="M24 30 L26.2 34 H21.8 Z" fill="#0f6b5c"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #16211c;">Data-Frames</span>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+      <path d="M12 8 L19 15 H29 L36 8 L40 14 V28 A16 16 0 0 1 8 28 V14 Z" fill="#cdd8d2"/>
+      <circle cx="17" cy="23" r="6.5" fill="#16211c"/><circle cx="31" cy="23" r="6.5" fill="#16211c"/>
+      <path d="M24 30 L26.2 34 H21.8 Z" fill="#16211c"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #ffffff;">Data-Frames</span>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 30px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M12 8 L19 15 H29 L36 8 L40 14 V28 A16 16 0 0 1 8 28 V14 Z" fill="#16211c"/><circle cx="17" cy="23" r="6.5" fill="#0f6b5c"/><circle cx="31" cy="23" r="6.5" fill="#0f6b5c"/><path d="M24 30 L26.2 34 H21.8 Z" fill="#0f6b5c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">48</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="32" height="32" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M12 8 L19 15 H29 L36 8 L40 14 V28 A16 16 0 0 1 8 28 V14 Z" fill="#16211c"/><circle cx="17" cy="23" r="6.5" fill="#0f6b5c"/><circle cx="31" cy="23" r="6.5" fill="#0f6b5c"/><path d="M24 30 L26.2 34 H21.8 Z" fill="#0f6b5c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">32</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M12 8 L19 15 H29 L36 8 L40 14 V28 A16 16 0 0 1 8 28 V14 Z" fill="#16211c"/><circle cx="17" cy="23" r="6.5" fill="#0f6b5c"/><circle cx="31" cy="23" r="6.5" fill="#0f6b5c"/><path d="M24 30 L26.2 34 H21.8 Z" fill="#0f6b5c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">16</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px;">
+        <span style="font-size: 13px; color: #5f6b63;">The eyes hold to 16px. Below that the beak is the first to go.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>The other lesson from the category: the brands people genuinely remember use a creature, not an abstraction &mdash; CrowdStrike has a falcon, Snyk a dog. An owl is the honest one for what you sell. It watches all night and it does not miss much. Solid silhouette, so it carries the same weight as the rest.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>The most polarising of the eight. A creature either charms people or reads as soft for a firm that breaks into networks for a living, and there is not much middle ground. At a glance some people will read it as a cat before an owl. It is also the one that would need the most drawing to finish properly.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

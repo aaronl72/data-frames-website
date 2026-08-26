@@ -1,0 +1,382 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; text-wrap: pretty; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .tile { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px;
+            display: flex; flex-direction: column; }
+    .tile-stage { flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 26px 20px; }
+    .tile-cap { border-top: 1px solid #e2ddd2; padding: 10px 16px; }
+    .sw { display: flex; flex-direction: column; gap: 6px; }
+    .chip { height: 52px; border-radius: 5px; }
+    .hex { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px; color: #5f6b63; }
+    .rule { height: 1px; background: #e2ddd2; }
+    h1 { margin: 0; }
+  </style>
+</helmet>
+
+<div style="padding: 48px; display: flex; flex-direction: column; gap: 34px;">
+
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 40px;">
+    <div style="display: flex; flex-direction: column; gap: 8px;">
+      <span class="lbl" style="color: #0f6b5c;">Data-Frames &middot; Brand sheet</span>
+      <h1 class="disp" style="font-size: 52px; line-height: 1.02; color: #16211c; letter-spacing: -0.02em;">The mark, and how to use it</h1>
+      <p style="color: #5f6b63; font-size: 15px; max-width: 58ch; margin-top: 4px;">Everything here is drawn from the site you already have &mdash; same palette, same three typefaces. Take any piece of it into a deck, a document or a print job and it will still look like you.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0;">
+      <span class="mono" style="font-size: 11px; color: #8a8478;">Mark not chosen <span class="mono" style="font-size: 11px; color: #8a8478;">Direction A &middot; The Aperture</span>mdash; shown with a placeholder</span>
+      <span class="mono" style="font-size: 11px; color: #8a8478;">data-frames.com</span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl">01 &mdash; Primary lockup</span>
+    <div class="panel" style="padding: 54px; display: flex; align-items: center; justify-content: center;">
+      <div style="display: flex; align-items: center; gap: 22px;">
+        <svg width="72" height="72" viewBox="0 0 48 48" fill="none" aria-label="Data-Frames">
+          <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+            <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+            <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+          </g>
+          <circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+        </svg>
+        <span class="disp" style="font-size: 60px; line-height: 1; color: #16211c;">Data-Frames</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl">02 &mdash; The six you will actually need</span>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;">
+
+      <div class="tile">
+        <div class="tile-stage">
+          <div style="display: flex; align-items: center; gap: 13px;">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+              </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+            </svg>
+            <span class="disp" style="font-size: 32px; line-height: 1; color: #16211c;">Data-Frames</span>
+          </div>
+        </div>
+        <div class="tile-cap"><span class="lbl">Horizontal &mdash; default</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 12px;">
+            <svg width="46" height="46" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+              </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+            </svg>
+            <span class="disp" style="font-size: 30px; line-height: 1; color: #16211c;">Data-Frames</span>
+          </div>
+        </div>
+        <div class="tile-cap"><span class="lbl">Stacked &mdash; narrow slots</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage">
+          <svg width="64" height="64" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+              <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+            </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+          </svg>
+        </div>
+        <div class="tile-cap"><span class="lbl">Mark alone &mdash; avatars, favicon</span></div>
+      </div>
+
+      <div class="tile" style="border-color: #2c3d35;">
+        <div class="tile-stage" style="background: #16211c; border-radius: 7px 7px 0 0;">
+          <div style="display: flex; align-items: center; gap: 13px;">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <g stroke="#38a68f" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+              </g><circle cx="24" cy="24" r="5" fill="#38a68f"/>
+            </svg>
+            <span class="disp" style="font-size: 32px; line-height: 1; color: #ffffff;">Data-Frames</span>
+          </div>
+        </div>
+        <div class="tile-cap" style="border-color: #2c3d35;"><span class="lbl">Reversed &mdash; on ink</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage">
+          <div style="display: flex; align-items: center; gap: 13px;">
+            <svg width="38" height="38" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <g stroke="#16211c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+              </g><circle cx="24" cy="24" r="5" fill="#16211c"/>
+            </svg>
+            <span class="disp" style="font-size: 32px; line-height: 1; color: #16211c;">Data-Frames</span>
+          </div>
+        </div>
+        <div class="tile-cap"><span class="lbl">One colour &mdash; stamps, embroidery</span></div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <svg width="28" height="28" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+              </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+            </svg>
+            <span class="mono" style="font-size: 17px; font-weight: 600; color: #16211c; letter-spacing: -0.01em;">data-frames.com</span>
+          </div>
+        </div>
+        <div class="tile-cap"><span class="lbl">Technical &mdash; footers, terminals</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl">03 &mdash; Breathing room and floors</span>
+    <div style="display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 20px;">
+
+      <div class="panel" style="padding: 28px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; align-items: center; justify-content: center; background: #f0ede6; border-radius: 6px; padding: 34px;">
+          <div style="border: 1.5px dashed #b9b1a2; padding: 24px;">
+            <div style="display: flex; align-items: center; gap: 17px;">
+              <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                  <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                  <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+                </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+              </svg>
+              <span class="disp" style="font-size: 40px; line-height: 1; color: #16211c;">Data-Frames</span>
+            </div>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: #5f6b63;">Keep clear space on every side equal to <strong style="color: #2b352f; font-weight: 600;">half the mark&#39;s height</strong>. Nothing crosses the dashed line &mdash; not a rule, not a photo edge, not another logo.</p>
+      </div>
+
+      <div class="panel" style="padding: 28px; display: flex; flex-direction: column; gap: 16px;">
+        <div style="flex-grow: 1; display: flex; align-items: center; justify-content: center; gap: 34px; background: #f0ede6; border-radius: 6px; padding: 30px 24px;">
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+            <svg width="16" height="16" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <g stroke="#16211c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+              </g><circle cx="24" cy="24" r="5" fill="#16211c"/>
+            </svg>
+            <span class="mono" style="font-size: 10px; color: #5f6b63;">16px floor</span>
+          </div>
+          <div style="display: flex; flex-direction: column; align-items: center; gap: 9px;">
+            <div style="display: flex; align-items: center; gap: 7px;">
+              <svg width="20" height="20" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                <g stroke="#16211c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+                  <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+                  <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+                </g><circle cx="24" cy="24" r="5" fill="#16211c"/>
+              </svg>
+              <span class="disp" style="font-size: 17px; line-height: 1; color: #16211c;">Data-Frames</span>
+            </div>
+            <span class="mono" style="font-size: 10px; color: #5f6b63;">120px floor</span>
+          </div>
+        </div>
+        <p style="font-size: 14px; color: #5f6b63;">The mark alone never goes below <strong style="color: #2b352f; font-weight: 600;">16px</strong>; the full lockup never below <strong style="color: #2b352f; font-weight: 600;">120px</strong> wide. Below that, drop the words and keep the mark.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl">04 &mdash; Colour, straight from the site</span>
+    <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+
+      <div class="panel" style="padding: 26px;">
+        <span class="lbl">Light surfaces</span>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 18px;">
+          <div class="sw"><div class="chip" style="background: #f7f5f1; border: 1px solid #e2ddd2;"></div><span class="hex">#f7f5f1</span><span class="hex" style="color: #8a8478;">Page</span></div>
+          <div class="sw"><div class="chip" style="background: #f0ede6; border: 1px solid #e2ddd2;"></div><span class="hex">#f0ede6</span><span class="hex" style="color: #8a8478;">Panel</span></div>
+          <div class="sw"><div class="chip" style="background: #e2ddd2;"></div><span class="hex">#e2ddd2</span><span class="hex" style="color: #8a8478;">Rule</span></div>
+          <div class="sw"><div class="chip" style="background: #0f6b5c;"></div><span class="hex">#0f6b5c</span><span class="hex" style="color: #8a8478;">Accent</span></div>
+          <div class="sw"><div class="chip" style="background: #16211c;"></div><span class="hex">#16211c</span><span class="hex" style="color: #8a8478;">Ink</span></div>
+        </div>
+        <p style="font-size: 13.5px; color: #5f6b63; margin-top: 16px;">Body text sits at #2b352f, secondary at #5f6b63. Green does one job at a time &mdash; the action, or the thing that changed.</p>
+      </div>
+
+      <div class="panel" style="padding: 26px; background: #16211c; border-color: #2c3d35;">
+        <span class="lbl" style="color: #8b9c94;">Dark surfaces</span>
+        <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 18px;">
+          <div class="sw"><div class="chip" style="background: #101a16; border: 1px solid #2c3d35;"></div><span class="hex" style="color: #8b9c94;">#101a16</span><span class="hex" style="color: #6b7d75;">Deep</span></div>
+          <div class="sw"><div class="chip" style="background: #16211c; border: 1px solid #2c3d35;"></div><span class="hex" style="color: #8b9c94;">#16211c</span><span class="hex" style="color: #6b7d75;">Ground</span></div>
+          <div class="sw"><div class="chip" style="background: #2c3d35;"></div><span class="hex" style="color: #8b9c94;">#2c3d35</span><span class="hex" style="color: #6b7d75;">Rule</span></div>
+          <div class="sw"><div class="chip" style="background: #38a68f;"></div><span class="hex" style="color: #8b9c94;">#38a68f</span><span class="hex" style="color: #6b7d75;">Accent</span></div>
+          <div class="sw"><div class="chip" style="background: #cdd8d2;"></div><span class="hex" style="color: #8b9c94;">#cdd8d2</span><span class="hex" style="color: #6b7d75;">Text</span></div>
+        </div>
+        <p style="font-size: 13.5px; color: #8b9c94; margin-top: 16px;">The same ink and green, lifted so they stay legible on dark. Never put #0f6b5c on #16211c &mdash; it goes muddy.</p>
+      </div>
+
+    </div>
+
+    <div class="panel" style="padding: 22px 26px; display: grid; grid-template-columns: 116px minmax(0, 1fr) 234px; gap: 24px; align-items: center;">
+      <span class="lbl">Status only</span>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px;">
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <span style="width: 14px; height: 14px; border-radius: 4px; background: #63c08a; flex-shrink: 0;"></span>
+          <div style="display: flex; flex-direction: column; line-height: 1.3;">
+            <span class="hex">#63c08a</span>
+            <span class="hex" style="color: #8a8478;">clear</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <span style="width: 14px; height: 14px; border-radius: 4px; background: #d5a44f; flex-shrink: 0;"></span>
+          <div style="display: flex; flex-direction: column; line-height: 1.3;">
+            <span class="hex">#d5a44f</span>
+            <span class="hex" style="color: #8a8478;">watch</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <span style="width: 14px; height: 14px; border-radius: 4px; background: #e2755f; flex-shrink: 0;"></span>
+          <div style="display: flex; flex-direction: column; line-height: 1.3;">
+            <span class="hex">#e2755f</span>
+            <span class="hex" style="color: #8a8478;">critical</span>
+          </div>
+        </div>
+        <div style="display: flex; align-items: center; gap: 9px;">
+          <span style="width: 14px; height: 14px; border-radius: 4px; background: #b03a2e; flex-shrink: 0;"></span>
+          <div style="display: flex; flex-direction: column; line-height: 1.3;">
+            <span class="hex">#b03a2e</span>
+            <span class="hex" style="color: #8a8478;">breach</span>
+          </div>
+        </div>
+      </div>
+      <span style="font-size: 13.5px; color: #5f6b63;">These four report severity. They are not decoration, and they never appear in the logo.</span>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl">05 &mdash; Three typefaces, three jobs</span>
+    <div class="panel" style="padding: 30px; display: flex; flex-direction: column; gap: 22px;">
+
+      <div style="display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 26px; align-items: baseline;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span class="mono" style="font-size: 12px; font-weight: 600; color: #16211c;">Instrument Serif</span>
+          <span class="mono" style="font-size: 10.5px; color: #8a8478;">display &middot; falls back to Georgia</span>
+        </div>
+        <span class="disp" style="font-size: 42px; line-height: 1.05; color: #16211c; letter-spacing: -0.015em;">Headlines, and nothing smaller than 20px</span>
+      </div>
+      <div class="rule"></div>
+
+      <div style="display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 26px; align-items: baseline;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span class="mono" style="font-size: 12px; font-weight: 600; color: #16211c;">IBM Plex Sans</span>
+          <span class="mono" style="font-size: 10.5px; color: #8a8478;">text &middot; 400 / 500 / 600</span>
+        </div>
+        <span style="font-size: 17px; color: #2b352f;">Everything a person reads in sentences &mdash; body copy, buttons, form labels, the words on a slide. 16px, 1.6 line-height, and a measure no wider than about 60 characters.</span>
+      </div>
+      <div class="rule"></div>
+
+      <div style="display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 26px; align-items: baseline;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <span class="mono" style="font-size: 12px; font-weight: 600; color: #16211c;">IBM Plex Mono</span>
+          <span class="mono" style="font-size: 10.5px; color: #8a8478;">data &middot; 400 / 500 / 600</span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <span class="mono" style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #0f6b5c; font-weight: 500;">Section labels &middot; eyebrows</span>
+          <span class="mono" style="font-size: 14px; color: #2b352f;">Timestamps, hostnames, 10.0.4.17, CVE-2026-0041, 99.98%</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 12px;">
+    <span class="lbl">06 &mdash; Four ways to wreck it</span>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px;">
+
+      <div class="tile">
+        <div class="tile-stage" style="padding: 30px 20px;">
+          <svg width="56" height="56" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <g stroke="#3b6ee0" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+              <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+            </g><circle cx="24" cy="24" r="5" fill="#c0392b"/>
+          </svg>
+        </div>
+        <div class="tile-cap" style="display: flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#e2755f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 2.5 L9.5 9.5 M9.5 2.5 L2.5 9.5"/></svg>
+          <span style="font-size: 13px; color: #5f6b63;">Recolour it</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage" style="padding: 30px 20px;">
+          <svg width="86" height="52" viewBox="0 0 48 48" preserveAspectRatio="none" fill="none" aria-hidden="true">
+            <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+              <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+            </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+          </svg>
+        </div>
+        <div class="tile-cap" style="display: flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#e2755f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 2.5 L9.5 9.5 M9.5 2.5 L2.5 9.5"/></svg>
+          <span style="font-size: 13px; color: #5f6b63;">Stretch it</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage" style="padding: 30px 20px; background: #5f6b63; border-radius: 7px 7px 0 0;">
+          <svg width="56" height="56" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+              <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+            </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+          </svg>
+        </div>
+        <div class="tile-cap" style="display: flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#e2755f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 2.5 L9.5 9.5 M9.5 2.5 L2.5 9.5"/></svg>
+          <span style="font-size: 13px; color: #5f6b63;">Sink it into mid-tone</span>
+        </div>
+      </div>
+
+      <div class="tile">
+        <div class="tile-stage" style="padding: 30px 20px;">
+          <svg width="56" height="56" viewBox="0 0 48 48" fill="none" aria-hidden="true" style="filter: drop-shadow(3px 4px 3px rgba(0,0,0,0.45));">
+            <g stroke="#0f6b5c" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
+              <path d="M6 17.5 L6 6 L17.5 6"/><path d="M30.5 6 L42 6 L42 17.5"/>
+              <path d="M42 30.5 L42 42 L30.5 42"/><path d="M17.5 42 L6 42 L6 30.5"/>
+            </g><circle cx="24" cy="24" r="5" fill="#0f6b5c"/>
+          </svg>
+        </div>
+        <div class="tile-cap" style="display: flex; align-items: center; gap: 8px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#e2755f" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M2.5 2.5 L9.5 9.5 M9.5 2.5 L2.5 9.5"/></svg>
+          <span style="font-size: 13px; color: #5f6b63;">Add shadow or glow</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

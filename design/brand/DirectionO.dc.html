@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Direction O</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Layers</h1>
+  </div>
+
+  <div class="panel" style="padding: 30px; display: flex; align-items: center; justify-content: center;">
+    <svg width="116" height="116" viewBox="0 0 48 48" aria-label="Data-Frames layers mark">
+      <rect x="4" y="4" width="26" height="26" fill="#16211c"/>
+      <rect x="13" y="13" width="26" height="26" fill="#0f6b5c"/>
+      <rect x="22" y="22" width="22" height="22" fill="#16211c"/>
+    </svg>
+  </div>
+
+  <div class="panel" style="padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="4" y="4" width="26" height="26" fill="#16211c"/><rect x="13" y="13" width="26" height="26" fill="#0f6b5c"/><rect x="22" y="22" width="22" height="22" fill="#16211c"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #16211c;">Data-Frames</span>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="44" height="44" viewBox="0 0 48 48" aria-hidden="true">
+      <rect x="4" y="4" width="26" height="26" fill="#cdd8d2"/><rect x="13" y="13" width="26" height="26" fill="#38a68f"/><rect x="22" y="22" width="22" height="22" fill="#cdd8d2"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #ffffff;">Data-Frames</span>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 30px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="48" height="48" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="4" y="4" width="26" height="26" fill="#16211c"/><rect x="13" y="13" width="26" height="26" fill="#0f6b5c"/><rect x="22" y="22" width="22" height="22" fill="#16211c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">48</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="32" height="32" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="4" y="4" width="26" height="26" fill="#16211c"/><rect x="13" y="13" width="26" height="26" fill="#0f6b5c"/><rect x="22" y="22" width="22" height="22" fill="#16211c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">32</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 48 48" aria-hidden="true">
+          <rect x="4" y="4" width="26" height="26" fill="#16211c"/><rect x="13" y="13" width="26" height="26" fill="#0f6b5c"/><rect x="22" y="22" width="22" height="22" fill="#16211c"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">16</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px;">
+        <span style="font-size: 13px; color: #5f6b63;">Three flat blocks. It only ever gets simpler as it shrinks.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>Frames, plural &mdash; the part of your name none of the other marks use. Three of them stepping back into depth, which is also how layered defence actually works: nothing relies on one wall. Flat colour, no perspective tricks, no gradients.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>Stacked offset squares is the universal &ldquo;copy&rdquo; or &ldquo;duplicate&rdquo; icon, and some people will read it that way first. The alternating colour is what pulls it away from that, so it cannot go single-colour.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

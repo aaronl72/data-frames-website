@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Direction B</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Flagged Row</h1>
+  </div>
+
+  <div class="panel" style="padding: 34px; display: flex; align-items: center; justify-content: center;">
+    <svg width="108" height="108" viewBox="0 0 48 48" fill="none" aria-label="Data-Frames table mark">
+      <path d="M7.7 17 H40.3" stroke="#16211c" stroke-width="3.4"/>
+      <rect x="7.6" y="7.6" width="32.8" height="32.8" stroke="#16211c" stroke-width="3.6"/>
+      <path d="M13 26.5 H35" stroke="#16211c" stroke-width="3.2" opacity="0.5"/>
+      <path d="M13 35 H35" stroke="#0f6b5c" stroke-width="3.2"/>
+    </svg>
+  </div>
+
+  <div class="panel" style="padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M7.7 17 H40.3" stroke="#16211c" stroke-width="3.4"/>
+      <rect x="7.6" y="7.6" width="32.8" height="32.8" stroke="#16211c" stroke-width="3.6"/>
+      <path d="M13 26.5 H35" stroke="#16211c" stroke-width="3.2" opacity="0.5"/>
+      <path d="M13 35 H35" stroke="#0f6b5c" stroke-width="3.2"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #16211c;">Data-Frames</span>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 22px 26px; display: flex; align-items: center; gap: 14px;">
+    <svg width="40" height="40" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M7.7 17 H40.3" stroke="#cdd8d2" stroke-width="3.4"/>
+      <rect x="7.6" y="7.6" width="32.8" height="32.8" stroke="#cdd8d2" stroke-width="3.6"/>
+      <path d="M13 26.5 H35" stroke="#cdd8d2" stroke-width="3.2" opacity="0.5"/>
+      <path d="M13 35 H35" stroke="#38a68f" stroke-width="3.2"/>
+    </svg>
+    <span class="disp" style="font-size: 34px; line-height: 1; color: #ffffff;">Data-Frames</span>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 30px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M7.7 17 H40.3" stroke="#16211c" stroke-width="3.4"/>
+          <rect x="7.6" y="7.6" width="32.8" height="32.8" stroke="#16211c" stroke-width="3.6"/>
+          <path d="M13 26.5 H35" stroke="#16211c" stroke-width="3.2" opacity="0.5"/>
+          <path d="M13 35 H35" stroke="#0f6b5c" stroke-width="3.2"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">48</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M7.7 17 H40.3" stroke="#16211c" stroke-width="3.4"/>
+          <rect x="7.6" y="7.6" width="32.8" height="32.8" stroke="#16211c" stroke-width="3.6"/>
+          <path d="M13 26.5 H35" stroke="#16211c" stroke-width="3.2" opacity="0.5"/>
+          <path d="M13 35 H35" stroke="#0f6b5c" stroke-width="3.2"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">32</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+        <svg width="16" height="16" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M7.7 17 H40.3" stroke="#16211c" stroke-width="3.4"/>
+          <rect x="7.6" y="7.6" width="32.8" height="32.8" stroke="#16211c" stroke-width="3.6"/>
+          <path d="M13 26.5 H35" stroke="#16211c" stroke-width="3.2" opacity="0.5"/>
+          <path d="M13 35 H35" stroke="#0f6b5c" stroke-width="3.2"/>
+        </svg>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">16</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 18px;">
+        <span style="font-size: 13px; color: #5f6b63;">Three rules inside a 16px box. They start to close up.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>The name read the other way: a data frame is a table. Header rule, two rows, one of them flagged green &mdash; the whole job in one glyph. Of the four, this is the one an analyst recognises instantly.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>The busiest mark here. Excellent at 32px and up, adequate at 16px, and it would not take embroidery or a single-colour stamp as cleanly as A.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>

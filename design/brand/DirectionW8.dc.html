@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+  <style>
+    body { margin: 0; background: #f7f5f1; color: #2b352f;
+           font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+           font-size: 16px; line-height: 1.6; }
+    a { color: #0f6b5c; text-decoration: none; }
+    a:hover { color: #0a4c41; }
+    p { margin: 0; }
+    .disp { font-family: 'Instrument Serif', Georgia, 'Iowan Old Style', serif; font-weight: 400; }
+    .mono { font-family: 'IBM Plex Mono', Consolas, 'SF Mono', Menlo, monospace; }
+    .lbl { font-family: 'IBM Plex Mono', Consolas, Menlo, monospace; font-size: 10.5px;
+           letter-spacing: 0.16em; text-transform: uppercase; color: #5f6b63; }
+    .panel { background: #ffffff; border: 1px solid #e2ddd2; border-radius: 8px; }
+    .nm { display: flex; flex-direction: column; font-weight: 700; letter-spacing: -0.015em; line-height: 1.02; }
+  </style>
+</helmet>
+
+<div style="padding: 40px; display: flex; flex-direction: column; gap: 20px;">
+
+  <div style="display: flex; flex-direction: column; gap: 6px;">
+    <span class="lbl" style="color: #0f6b5c;">Wordmark W8</span>
+    <h1 class="disp" style="font-size: 32px; line-height: 1.05; color: #16211c; margin: 0; letter-spacing: -0.015em;">The Corners</h1>
+  </div>
+
+  <div class="panel" style="padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div style="border-left: 8px solid #0f6b5c; border-top: 8px solid #0f6b5c; padding: 15px 0 0 17px;">
+      <div style="border-right: 8px solid #16211c; border-bottom: 8px solid #16211c; padding: 0 17px 15px 0;">
+        <div class="nm" style="font-size: 30px; color: #16211c;"><span>DATA</span><span>FRAMES</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #16211c; border-radius: 8px; padding: 40px; display: flex; align-items: center; justify-content: center;">
+    <div style="border-left: 8px solid #38a68f; border-top: 8px solid #38a68f; padding: 15px 0 0 17px;">
+      <div style="border-right: 8px solid #cdd8d2; border-bottom: 8px solid #cdd8d2; padding: 0 17px 15px 0;">
+        <div class="nm" style="font-size: 30px; color: #ffffff;"><span>DATA</span><span>FRAMES</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" style="padding: 20px 26px; display: flex; flex-direction: column; gap: 14px;">
+    <span class="lbl">Holds up at</span>
+    <div style="display: flex; align-items: flex-end; gap: 28px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div style="border-left: 5px solid #0f6b5c; border-top: 5px solid #0f6b5c; padding: 9px 0 0 10px;">
+          <div style="border-right: 5px solid #16211c; border-bottom: 5px solid #16211c; padding: 0 10px 9px 0;">
+            <div class="nm" style="font-size: 17px; color: #16211c;"><span>DATA</span><span>FRAMES</span></div>
+          </div>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">120px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px;">
+        <div style="border-left: 3px solid #0f6b5c; border-top: 3px solid #0f6b5c; padding: 6px 0 0 6px;">
+          <div style="border-right: 3px solid #16211c; border-bottom: 3px solid #16211c; padding: 0 6px 6px 0;">
+            <div class="nm" style="font-size: 10px; color: #16211c;"><span>DATA</span><span>FRAMES</span></div>
+          </div>
+        </div>
+        <span class="mono" style="font-size: 10px; color: #8a8478;">75px</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 6px; padding-bottom: 16px;">
+        <span style="font-size: 13px; color: #5f6b63;">Compact, but still wider than tall Compact and square-ish, so it works as an avatar without changes.mdash; an avatar would need the brackets on their own.</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; flex-direction: column; gap: 10px;">
+    <p style="font-size: 14px; color: #2b352f;"><span class="lbl" style="color: #0f6b5c;">Why</span><br>A frame that only exists at two corners &mdash; the eye closes the rectangle itself. Half the weight of a full border with the same framing effect, and the two colours meeting on the diagonal give it the hard contrast the strong marks in this category rely on.</p>
+    <p style="font-size: 14px; color: #5f6b63;"><span class="lbl">Tradeoff</span><br>Corner brackets are close to the crop-mark idea you turned down in the first round &mdash; heavier and two-tone here, but the same family. Opposing corners can also look unresolved to some people rather than deliberate.</p>
+  </div>
+
+</div>
+</x-dc>
+</body>
+</html>
