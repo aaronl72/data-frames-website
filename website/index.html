@@ -84,7 +84,9 @@
   }
   .sec-lead { color: var(--dim); font-size: 16px; margin-top: 14px; max-width: 56ch; }
 
-  section { padding: 96px 0; scroll-margin-top: 80px; }
+  /* anchor jumps: the 96px top padding sits under the 80px sticky header, so a
+     linked section lands with its content just below the nav instead of a screen lower */
+  section { padding: 96px 0; scroll-margin-top: 0; }
   section.alt { background: var(--panel-alt); border-top: 1px solid var(--border); }
   section.dark { background: var(--d-bg); color: var(--d-text); }
   section.dark h2.sec { color: #ffffff; }
@@ -101,7 +103,7 @@
   nav { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .brand { display: flex; align-items: center; gap: 10px; }
   .brand-name { font-family: 'Instrument Serif', Georgia, serif; font-size: 22px; color: #fff; }
-  .nav-links { display: flex; gap: 30px; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; font-size: 14px; }
   .nav-links a { color: var(--d-dim); }
   .nav-links a:hover { color: var(--d-accent); }
   .nav-cta {
@@ -117,6 +119,8 @@
     background: var(--d-bg); color: var(--d-text);
     min-height: min(calc(100vh - 84px), 880px);
     display: flex; flex-direction: column;
+    /* #top sits directly below the 80px header, so offset it back to the true page top */
+    scroll-margin-top: 80px;
   }
 
   .marquee-band {
@@ -217,10 +221,10 @@
   .log.critical .m { color: #e6b3a8; }
 
   /* ---------- cards ---------- */
-  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 48px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
   .card {
     background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
-    padding: 28px; display: flex; flex-direction: column; gap: 12px;
+    padding: 24px; display: flex; flex-direction: column; gap: 12px;
   }
   .card h3 { font-size: 17px; font-weight: 600; color: var(--ink); }
   .card p { color: var(--dim); font-size: 14.5px; }
@@ -234,28 +238,39 @@
   .card-photo { padding: 0; gap: 0; overflow: hidden; }
   .card-photo .card-body { padding: 24px 26px 28px; display: flex; flex-direction: column; gap: 10px; }
 
-  /* ---------- toolset ---------- */
-  .tool-row {
-    display: flex; align-items: center; gap: 28px;
-    padding: 24px 0; border-bottom: 1px solid var(--border);
+  /* ---------- toolset ----------
+     four across rather than four stacked rows, so the whole section
+     (tools + frameworks) fits one screen when you jump to it from the nav */
+  /* group divider: a label plus a rule, so the tools read as their own block
+     instead of a sentence that blends into the body copy */
+  .sub-rule { display: flex; align-items: center; gap: 16px; margin-top: 34px; }
+  .sub-rule span {
+    font-family: 'IBM Plex Mono', Consolas, Menlo, monospace;
+    font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--accent); white-space: nowrap;
   }
-  .tool-row:first-child { border-top: 1px solid var(--border); }
+  .sub-rule::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+
+  .tool-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; margin-top: 22px; }
+  .tool-item { display: flex; flex-direction: column; gap: 12px; }
   .tool-chip {
     background: #000; border-radius: 6px; padding: 10px 18px;
     display: flex; align-items: center; justify-content: center;
-    height: 120px; width: 180px; flex-shrink: 0;
+    height: 106px; width: 100%;
   }
-  .tool-chip img { height: 52px; max-width: 150px; object-fit: contain; }
-  .tool-chip img.badge { height: 96px; }
-  .tool-row h3 { font-size: 17px; font-weight: 600; color: var(--ink); margin-bottom: 6px; }
-  .tool-row p { color: var(--dim); font-size: 14.5px; max-width: 64ch; }
+  .tool-chip img { height: 46px; max-width: 100%; object-fit: contain; }
+  .tool-chip img.badge { height: 84px; }
+  .tool-item h3 { font-size: 17px; font-weight: 600; color: var(--ink); }
+  .tool-item p { color: var(--dim); font-size: 14px; }
 
-  .fw-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 32px; }
+  .fw-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 28px; }
   .fw {
-    border: 1px dashed #c9c2b3; border-radius: 8px; padding: 20px 22px;
-    display: flex; flex-direction: column; gap: 6px;
+    background: var(--panel); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 18px 22px;
+    display: flex; flex-direction: column; gap: 8px;
   }
-  .fw-name { font-family: 'Instrument Serif', Georgia, serif; font-size: 21px; color: var(--ink); }
+  /* Instrument Serif only ships one weight, so the framework names use Plex Sans 700 to read genuinely bold */
+  .fw-name { font-size: 18px; font-weight: 700; color: var(--ink); letter-spacing: -0.005em; }
   .fw p { color: var(--dim); font-size: 14px; }
 
   /* ---------- process ---------- */
@@ -301,7 +316,7 @@
   details p { color: var(--dim); font-size: 15px; margin-top: 12px; max-width: 70ch; }
 
   /* ---------- pricing ---------- */
-  .price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 48px; align-items: start; }
+  .price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 32px; align-items: start; }
   .price {
     background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
     padding: 30px; display: flex; flex-direction: column; gap: 6px;
@@ -336,12 +351,6 @@
 
   /* ---------- contact ---------- */
   .contact-wrap { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 72px; align-items: start; }
-  .contact-email {
-    font-family: 'IBM Plex Mono', Consolas, Menlo, monospace;
-    color: var(--d-accent); font-size: 15px; display: inline-block; margin-top: 26px;
-    border-bottom: 1px solid rgba(56,166,143,0.4); padding-bottom: 3px;
-  }
-  .contact-email:hover { color: var(--ok); border-bottom-color: var(--ok); }
   form {
     background: var(--d-deep); border: 1px solid var(--d-border); border-radius: 10px;
     padding: 32px; display: flex; flex-direction: column; gap: 14px;
@@ -378,7 +387,7 @@
   /* ---------- responsive ---------- */
   @media (max-width: 900px) {
     .wrap { padding: 0 22px; }
-    section { padding: 64px 0; }
+    section { padding: 64px 0; scroll-margin-top: 24px; }
     h2.sec { font-size: 34px; }
     .nav-links { display: none; }
     .hero { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-top: 40px; padding-bottom: 40px; }
@@ -387,10 +396,10 @@
     .logview { height: 210px; }
     .grid-3, .price-grid, .fw-row { grid-template-columns: 1fr; }
     .process-wrap, .about-wrap, .contact-wrap { grid-template-columns: minmax(0, 1fr); gap: 40px; }
-    .tool-row { flex-wrap: wrap; gap: 18px; }
-    .tool-chip { height: 96px; width: 140px; }
-    .tool-chip img { height: 40px; }
-    .tool-chip img.badge { height: 72px; }
+    .tool-grid { grid-template-columns: 1fr; gap: 24px; }
+    .tool-chip { height: 84px; width: 140px; }
+    .tool-chip img { height: 38px; }
+    .tool-chip img.badge { height: 68px; }
     .form-row { grid-template-columns: 1fr; }
     form { padding: 24px; }
     .mq-name { font-size: 17px; }
@@ -415,10 +424,13 @@
     </a>
     <div class="nav-links">
       <a href="#services">Services</a>
+      <a href="#who">Who It's For</a>
       <a href="#stack">Toolset</a>
       <a href="#process">Approach</a>
-      <a href="#pricing">Pricing</a>
       <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
     </div>
     <a href="#contact" class="nav-cta">Get a Quote</a>
   </nav>
@@ -582,54 +594,46 @@
 
 <section id="stack">
   <div class="wrap">
-    <div class="eyebrow">03 / Our toolset</div>
-    <h2 class="sec" style="max-width: 20ch;">Built on recognized tools</h2>
-    <p class="sec-lead">No proprietary black boxes &mdash; the same open-source tools used across the security industry, so nothing you're protected by is a mystery.</p>
+    <div class="eyebrow">03 / Frameworks &amp; toolset</div>
+    <h2 class="sec" style="max-width: 44ch;">Built on recognized frameworks and tools</h2>
+    <p class="sec-lead" style="max-width: 118ch;">No proprietary black boxes &mdash; every service is grounded in a recognized framework, not improvised, and delivered with the same open-source tools used across the security industry.</p>
 
-    <div style="margin-top: 40px;">
-      <div class="tool-row">
-        <div class="tool-chip"><img src="assets/logos/wazuh.svg" alt="Wazuh logo"></div>
-        <div>
-          <h3>Wazuh &mdash; Detection &amp; SIEM</h3>
-          <p>Open-source SIEM and XDR. Correlates logs across your environment in real time to catch intrusions, policy violations, and vulnerabilities as they happen.</p>
-        </div>
-      </div>
-      <div class="tool-row">
-        <div class="tool-chip"><img src="assets/logos/metasploit.svg" alt="Metasploit logo"></div>
-        <div>
-          <h3>Metasploit &mdash; Offensive Testing</h3>
-          <p>The industry-standard penetration testing framework. Simulates real attacker techniques against your own infrastructure, under controlled conditions.</p>
-        </div>
-      </div>
-      <div class="tool-row">
-        <div class="tool-chip"><img src="assets/logos/shuffle_topleft.svg" alt="Shuffle logo"></div>
-        <div>
-          <h3>Shuffle &mdash; Security Automation</h3>
-          <p>Open-source orchestration and automated response. Turns a detection alert into a containment action immediately, instead of waiting on a human.</p>
-        </div>
-      </div>
-      <div class="tool-row">
-        <div class="tool-chip"><img src="assets/logos/tpot.png" alt="T-Pot logo" class="badge"></div>
-        <div>
-          <h3>T-Pot &mdash; Deception &amp; Honeypots</h3>
-          <p>A multi-honeypot platform deploying decoy systems to attract and study real attacker behavior, giving early warning before production is touched.</p>
-        </div>
-      </div>
-    </div>
-
-    <p class="sec-lead" style="margin-top: 44px; color: var(--ink); font-weight: 600;">Every service above is grounded in a recognized framework, not improvised:</p>
     <div class="fw-row">
       <div class="fw">
         <div class="fw-name">NIST CSF</div>
-        <p>Organizes everything we do into core functions &mdash; Govern, Identify, Protect, Detect, Respond, Recover &mdash; so priorities follow a recognized structure, not guesswork.</p>
+        <p>Organizes our work into Govern, Identify, Protect, Detect, Respond and Recover, so priorities follow a recognized structure.</p>
       </div>
       <div class="fw">
         <div class="fw-name">CIS Controls</div>
-        <p>A prioritized set of safeguards &mdash; asset inventory, secure configuration, access control, continuous monitoring &mdash; that turns strategy into specific hardening steps.</p>
+        <p>Prioritized safeguards &mdash; asset inventory, secure configuration, access control &mdash; that turn strategy into hardening steps.</p>
       </div>
       <div class="fw">
         <div class="fw-name">MITRE ATT&amp;CK</div>
-        <p>A knowledge base of real attacker tactics, used to map both our penetration testing and our detection coverage to what attackers actually do.</p>
+        <p>A knowledge base of real attacker tactics, used to map our testing and detection coverage to what attackers actually do.</p>
+      </div>
+    </div>
+
+    <div class="sub-rule"><span>Tools we run day to day</span></div>
+    <div class="tool-grid">
+      <div class="tool-item">
+        <div class="tool-chip"><img src="assets/logos/wazuh.svg" alt="Wazuh logo"></div>
+        <h3>Wazuh &mdash; Detection &amp; SIEM</h3>
+        <p>Open-source SIEM and XDR. Correlates logs across your environment in real time to catch intrusions, policy violations, and vulnerabilities as they happen.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-chip"><img src="assets/logos/metasploit.svg" alt="Metasploit logo"></div>
+        <h3>Metasploit &mdash; Offensive Testing</h3>
+        <p>The industry-standard penetration testing framework. Simulates real attacker techniques against your own infrastructure, under controlled conditions.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-chip"><img src="assets/logos/shuffle_topleft.svg" alt="Shuffle logo"></div>
+        <h3>Shuffle &mdash; Security Automation</h3>
+        <p>Open-source orchestration and automated response. Turns a detection alert into a containment action immediately, instead of waiting on a human.</p>
+      </div>
+      <div class="tool-item">
+        <div class="tool-chip"><img src="assets/logos/tpot.png" alt="T-Pot logo" class="badge"></div>
+        <h3>T-Pot &mdash; Deception &amp; Honeypots</h3>
+        <p>A multi-honeypot platform deploying decoy systems to attract and study real attacker behavior, giving early warning before production is touched.</p>
       </div>
     </div>
   </div>
@@ -778,10 +782,9 @@
         <div class="eyebrow">08 / Contact</div>
         <h2 class="sec" style="max-width: 16ch;">Let's talk about your environment</h2>
         <p class="sec-lead" style="margin-top: 18px; max-width: 40ch;">Tell us a bit about your business and current setup. We'll follow up to schedule a scoping call &mdash; no obligation.</p>
-        <a class="contact-email" href="mailto:aaron@data-frames.com">aaron@data-frames.com</a>
       </div>
 
-      <form id="contactForm" action="https://formsubmit.co/aaron@data-frames.com" method="POST">
+      <form id="contactForm" method="POST">
         <div class="form-row">
           <div>
             <label class="visually-hidden" for="f-name">Name</label>
@@ -811,6 +814,7 @@
         <input type="hidden" name="_next" value="https://data-frames.com/#contact">
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none;">
         <button type="submit" class="form-submit">Send</button>
+        <noscript><p style="font-size: 14px; color: #f0907e; font-weight: 600;">This form needs JavaScript enabled to send.</p></noscript>
         <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
       </form>
     </div>
@@ -865,7 +869,13 @@
   }
   buildLog();
 
-  document.getElementById('contactForm').addEventListener('submit', function (e) {
+  // The delivery address is assembled at runtime from separate pieces, so the plain
+  // string never appears in the page source for address-harvesting bots to scrape.
+  var inbox = ["aaron", "data-frames.com"].join(String.fromCharCode(64));
+  var contactForm = document.getElementById("contactForm");
+  contactForm.action = "https://formsubmit.co/" + inbox;
+
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
     var form = this;
     var status = document.getElementById('formStatus');
@@ -873,8 +883,7 @@
 
     function fail(detail) {
       status.classList.add('error');
-      status.innerHTML = "Sorry, that didn't send. Please email " +
-        '<a href="mailto:aaron@data-frames.com">aaron@data-frames.com</a> directly.';
+      status.textContent = "Sorry, that didn't send. Please try again in a moment.";
       if (detail && window.console) { console.error('Contact form failed:', detail); }
     }
 
@@ -883,7 +892,7 @@
     status.style.display = 'block';
     button.disabled = true;
 
-    fetch('https://formsubmit.co/ajax/aaron@data-frames.com', {
+    fetch("https://formsubmit.co/ajax/" + inbox, {
       method: 'POST',
       headers: { 'Accept': 'application/json' },
       body: new URLSearchParams(new FormData(form))
