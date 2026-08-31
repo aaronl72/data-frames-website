@@ -342,9 +342,13 @@
   }
   .price-tool {
     font-family: 'IBM Plex Mono', Consolas, Menlo, monospace;
-    font-size: 11px; letter-spacing: 0.06em; color: var(--dim); margin-top: 10px;
+    font-size: 11px; letter-spacing: 0.06em; color: var(--dim); line-height: 1.5;
+    margin-top: 12px; padding: 9px 12px;
+    background: var(--panel-alt); border: 1px solid var(--border); border-radius: 4px;
   }
-  .price.feature .price-tool { color: var(--d-dim); }
+  .price.feature .price-tool {
+    color: var(--d-dim); background: rgba(255,255,255,0.06); border-color: var(--d-border);
+  }
   .price-amount { display: flex; align-items: baseline; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
   .price-amount strong { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 38px; color: var(--ink); line-height: 1; }
   .price.feature .price-amount strong { color: #fff; }
